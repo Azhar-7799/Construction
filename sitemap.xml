@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://crownhomespaces.com/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/about</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/services</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/projects</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/testimonials</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/careers</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/contact</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://crownhomespaces.com/master-azhar</loc>
+    <priority>0.85</priority>
+  </url>
+</urlset>

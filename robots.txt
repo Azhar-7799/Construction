@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://crownhomespaces.com/sitemap.xml
+Host: https://crownhomespaces.com

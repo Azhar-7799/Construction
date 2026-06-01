@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1c140f"/>
+      <stop offset="100%" stop-color="#b38c66"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#g)"/>
+  <circle cx="600" cy="420" r="160" fill="#000" opacity="0.15"/>
+  <text x="600" y="840" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="48" font-weight="700">Shaik Azaruddin</text>
+  <text x="600" y="900" text-anchor="middle" fill="#f7e0c2" font-family="Inter, sans-serif" font-size="24">Founder, Crown Home Spaces</text>
+</svg>
