@@ -30,7 +30,7 @@ const Home = () => (
               <h2 className="text-3xl font-semibold text-white sm:text-4xl">Leadership beyond construction and luxury interiors.</h2>
               <p className="max-w-2xl text-base leading-8 text-crown-beige/90 sm:text-lg">Shaik Azaruddin leads both Crown Home Spaces and Fighters Combat Academy with a vision focused on discipline, leadership, transformation, and premium excellence.</p>
               <div className="flex flex-wrap gap-3">
-                <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">Visit Fighters Combat Academy</a>
+                <a href="https://fighter-combat.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">Visit Fighters Combat Academy</a>
                 <Link to="/master-azhar" className="inline-flex rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Explore Founder Journey</Link>
               </div>
             </div>

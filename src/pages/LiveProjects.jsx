@@ -71,7 +71,7 @@ const LiveProjects = () => {
               <div className="mt-8 flex flex-wrap gap-3">
 <Link to="/projects" className="inline-flex items-center justify-center rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">View Portfolio</Link>
               <Link to="/master-azhar" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Explore Founder Journey</Link>
-                <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Visit Fighters Combat Academy</a>
+                <a href="https://fighter-combat.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Visit Fighters Combat Academy</a>
               </div>
 
             </div>

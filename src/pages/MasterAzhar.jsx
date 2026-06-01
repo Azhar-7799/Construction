@@ -23,7 +23,7 @@ const Hero = ({ image }) => (
         <div className="hero-animate mt-8 flex flex-wrap gap-3">
           <Link to="/projects" className="inline-flex items-center gap-2 rounded-full bg-transparent border border-crown-gold px-5 py-3 text-sm text-crown-gold hover:bg-white/5">View Projects</Link>
           <a href="#founder-story" className="inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Explore Founder Journey</a>
-          <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-crown-gold bg-crown-gold/10 px-5 py-3 text-sm text-crown-beige">Visit Fighters Combat Academy</a>
+          <a href="https://fighter-combat.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-crown-gold bg-crown-gold/10 px-5 py-3 text-sm text-crown-beige">Visit Fighters Combat Academy</a>
         </div>
       </div>
 
@@ -278,7 +278,7 @@ const MasterAzhar = () => {
           <div className="flex-1 rounded-3xl border border-white/5 bg-gradient-to-br from-black/30 to-white/5 p-6 backdrop-blur-md">
             <h4 className="text-lg font-semibold">Elite combat training</h4>
             <p className="mt-3 text-crown-beige">The leadership brand behind Crown Home Spaces, Fighters Combat Academy fuses premium discipline with championship-level coaching in Hyderabad.</p>
-            <a href="https://fighter-combat-academy.netlify.app/" target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Visit Fighters Combat Academy</a>
+            <a href="https://fighter-combat.vercel.app/" target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Visit Fighters Combat Academy</a>
           </div>
 
           <div className="w-full max-w-sm flex-shrink-0">
