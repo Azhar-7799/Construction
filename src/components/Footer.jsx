@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
+  { label: 'Blog', path: '/blog' },
   { label: 'Projects', path: '/projects' },
   { label: 'Live Projects', path: '/live-projects' },
   { label: 'Testimonials', path: '/testimonials' },
@@ -18,12 +19,12 @@ const navLinks = [
 ];
 
 const serviceLinks = [
-  'Luxury Interiors',
-  'Architectural Elevations',
-  '3D Floor Plans',
-  'Landscaping',
-  'MEP Drawings',
-  'Project Management'
+  { label: 'Construction Interior Design', path: '/services/construction-interior-design' },
+  { label: 'Residential Construction', path: '/services/residential-construction' },
+  { label: 'Turnkey Projects', path: '/services/turnkey-projects' },
+  { label: 'Commercial Construction', path: '/services/commercial-construction' },
+  { label: 'Hospitality Projects', path: '/services/hospitality-projects' },
+  { label: 'Construction Management', path: '/services/construction-management' }
 ];
 
 const Footer = () => (
@@ -34,11 +35,11 @@ const Footer = () => (
           <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl sm:rounded-3xl bg-crown-rich text-sm sm:text-lg font-bold text-crown-gold flex-shrink-0">CH</div>
           <div>
             <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-crown-beige">Crown Home Spaces</p>
-            <p className="mt-1 text-sm sm:text-2xl font-semibold text-white">Luxury Interiors & Turnkey Projects</p>
+            <p className="mt-1 text-sm sm:text-2xl font-semibold text-white">Construction and Interior Services & Turnkey Projects</p>
           </div>
         </div>
         <p className="mt-4 max-w-md text-xs sm:text-sm leading-6 sm:leading-7 text-crown-beige/90">
-          Delivering cinematic luxury interiors, turnkey project delivery, and premium architectural storytelling from {businessStreetAddress}.
+          Delivering cinematic construction interiors, turnkey project delivery, and premium architectural storytelling from {businessStreetAddress}.
         </p>
         <div className="mt-6 flex items-center gap-3 text-lg sm:text-2xl text-crown-gold">
           <a href="https://instagram.com/crownhomespaces" target="_blank" rel="noreferrer" aria-label="Instagram"> <FaInstagram /> </a>
@@ -49,7 +50,7 @@ const Footer = () => (
             <img src={founderImage} alt="Shaik Azaruddin Founder" title="Work with Shaik Azaruddin" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
             <div>
               <p className="text-sm font-semibold text-white">Work with Founder</p>
-              <a href="/master-azhar" className="text-xs text-crown-beige/90 hover:text-white">Book a consultation</a>
+              <Link to="/master-azhar" className="text-xs text-crown-beige/90 hover:text-white">Book a consultation</Link>
             </div>
           </div>
         </div>
@@ -74,7 +75,9 @@ const Footer = () => (
         <h3 className="text-xs sm:text-sm uppercase tracking-[0.35em] text-crown-beige">Services</h3>
         <ul className="mt-4 flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm">
           {serviceLinks.map((service) => (
-            <li key={service} className="transition hover:text-white">{service}</li>
+            <li key={service.path} className="transition hover:text-white">
+              <Link to={service.path} className="transition hover:text-white">{service.label}</Link>
+            </li>
           ))}
         </ul>
       </div>
@@ -92,11 +95,11 @@ const Footer = () => (
 
     <div className="mx-auto mt-8 max-w-7xl border-t border-white/10 pt-6 sm:mt-12 sm:pt-8 text-xs sm:text-sm text-crown-beige/70">
       <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} Crown Home Spaces. All rights reserved.</p>
-        <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
+        <p>© {new Date().getFullYear()} Crown Home Spaces. All Rights Reserved.</p>
+          <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
           <a href="#" className="transition hover:text-white">Privacy Policy</a>
           <a href="#" className="transition hover:text-white">Terms & Conditions</a>
-          <a href="/sitemap.xml" className="transition hover:text-white">Sitemap</a>
+          <Link to="/contact" className="transition hover:text-white">Site Map</Link>
         </div>
       </div>
     </div>

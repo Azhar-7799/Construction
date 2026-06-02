@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
+import AnimatedCounter from '../components/AnimatedCounter.jsx';
 import Hero from '../sections/Hero.jsx';
 import ServicesSection from '../sections/ServicesSection.jsx';
 import FeaturedProjects from '../sections/FeaturedProjects.jsx';
@@ -13,8 +14,8 @@ import { businessStreetAddress } from '../constants/location.js';
 const Home = () => (
   <>
     <SEO
-      title="Crown Home Spaces | Luxury Interiors & Turnkey Projects in Kondapur"
-      description={`Crown Home Spaces delivers luxury interiors, turnkey projects, and premium architectural experiences from ${businessStreetAddress}.`}
+      title="Crown Home Spaces | Construction Interior & Turnkey Projects in Kondapur"
+      description={`Crown Home Spaces delivers construction interiors, turnkey projects, and premium architectural experiences from ${businessStreetAddress}.`}
       image={founderImage}
     />
     <Hero />
@@ -27,7 +28,7 @@ const Home = () => (
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.1fr] lg:items-center">
             <div className="space-y-6">
               <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Founder of Fighters Combat Academy</p>
-              <h2 className="text-3xl font-semibold text-white sm:text-4xl">Leadership beyond construction and luxury interiors.</h2>
+              <h2 className="text-3xl font-semibold text-white sm:text-4xl">Leadership beyond construction and interior excellence.</h2>
               <p className="max-w-2xl text-base leading-8 text-crown-beige/90 sm:text-lg">Shaik Azaruddin leads both Crown Home Spaces and Fighters Combat Academy with a vision focused on discipline, leadership, transformation, and premium excellence.</p>
               <div className="flex flex-wrap gap-3">
                 <a href="https://fighter-combat.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">Visit Fighters Combat Academy</a>
@@ -45,16 +46,9 @@ const Home = () => (
             </motion.div>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {[
-              { value: '11+', label: 'Years Experience' },
-              { value: '30+', label: 'Luxury Projects Delivered' },
-              { value: '30+', label: 'Telangana Areas Served' }
-            ].map((stat) => (
-              <div key={stat.label} className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition hover:border-crown-gold/30 hover:bg-white/10">
-                <p className="text-4xl font-semibold text-white">{stat.value}</p>
-                <p className="mt-3 text-sm uppercase tracking-[0.35em] text-crown-gold">{stat.label}</p>
-              </div>
-            ))}
+            <AnimatedCounter value={11} suffix="+" label="Years Experience" className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition hover:border-crown-gold/30 hover:bg-white/10" />
+            <AnimatedCounter value={30} suffix="+" label="Projects Completed" className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition hover:border-crown-gold/30 hover:bg-white/10" />
+            <AnimatedCounter value={30} suffix="+" label="Telangana Areas Served" className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm transition hover:border-crown-gold/30 hover:bg-white/10" />
           </div>
         </div>
       </section>

@@ -21,14 +21,14 @@ const Hero = () => (
         <div className="space-y-8">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
             <span className="inline-block rounded-full border border-crown-gold/30 bg-crown-gold/10 px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.35em] text-crown-beige sm:px-4 sm:py-2">
-              Hyderabad's luxury interiors & turnkey leader
+              Hyderabad's construction interior & turnkey leader
             </span>
           </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.1 }} className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.1 }} className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-tight text-white">
             Crown Home Spaces
-            <span className="block text-2xl text-crown-gold sm:text-3xl md:text-4xl lg:text-5xl">Luxury interiors. Strategic construction. Signature architecture.</span>
+            <span className="block text-[clamp(1.75rem,3vw,3rem)] text-crown-gold">Construction and Interior. Strategic construction. Signature architecture.</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="max-w-2xl text-sm leading-7 text-crown-beige sm:text-base md:text-lg md:leading-8">
+          <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="max-w-2xl text-[clamp(0.95rem,1.2vw,1.125rem)] leading-8 text-crown-beige">
             We craft cinematic residences, corporate landmarks, and premium interior ecosystems with timeless sophistication and disciplined execution.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }} className="flex flex-col gap-3 sm:flex-row sm:gap-4">

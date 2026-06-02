@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO.jsx';
+import AnimatedCounter from '../components/AnimatedCounter.jsx';
 import { businessStreetAddress } from '../constants/location.js';
 
 const imageFiles = import.meta.glob('../assets/images/live-projects/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url' });
@@ -41,11 +42,11 @@ const LiveProjects = () => {
   return (
     <>
       <SEO
-        title="Luxury Interior & Turnkey Projects in Kondapur | Crown Home Spaces"
-        description={`Explore premium luxury interior and turnkey construction projects by Crown Home Spaces at ${businessStreetAddress}.`}
+        title="Construction Interior & Turnkey Projects in Kondapur | Crown Home Spaces"
+        description={`Explore premium construction interior and turnkey construction projects by Crown Home Spaces at ${businessStreetAddress}.`}
         url="https://crownhomespaces.com/live-projects"
         image={bannerImage}
-        keywords="Luxury Interiors Hyderabad, Turnkey Projects Hyderabad, Live Projects, Crown Home Spaces, Architectural Elevation Hyderabad"
+        keywords="Construction Interiors Hyderabad, Turnkey Projects Hyderabad, Live Projects, Crown Home Spaces, Architectural Elevation Hyderabad"
       />
 
       <section className="relative h-[70vh] min-h-[520px] overflow-hidden sm:h-[75vh] lg:h-[80vh]">
@@ -66,8 +67,8 @@ const LiveProjects = () => {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Live Projects</p>
-              <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">Cinematic luxury interior and turnkey project showcases from Kondapur.</h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-crown-beige/90">A premium collection of live projects designed and delivered by Crown Home Spaces, featuring architectural elevations, residential construction, and luxury interiors with gold accent details.</p>
+              <h1 className="mt-4 text-[clamp(2rem,5vw,3.75rem)] font-semibold text-white sm:text-[clamp(2.5rem,4vw,4.5rem)] lg:text-[clamp(3rem,3.5vw,5rem)]">Cinematic construction interior and turnkey project showcases from Kondapur.</h1>
+              <p className="mt-6 max-w-xl text-[clamp(0.95rem,1.1vw,1.125rem)] leading-8 text-crown-beige/90">A premium collection of live projects designed and delivered by Crown Home Spaces, featuring architectural elevations, residential construction, and construction interiors with gold accent details.</p>
               <div className="mt-8 flex flex-wrap gap-3">
 <Link to="/projects" className="inline-flex items-center justify-center rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">View Portfolio</Link>
               <Link to="/master-azhar" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm text-white transition hover:bg-white/10">Explore Founder Journey</Link>
@@ -78,16 +79,10 @@ const LiveProjects = () => {
             <div className="rounded-[40px] border border-white/10 bg-black/40 p-8 shadow-glow backdrop-blur-xl">
               <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Founder cross-brand story</p>
               <h2 className="mt-4 text-3xl font-semibold text-white">Founder of Fighters Combat Academy</h2>
-              <p className="mt-4 text-crown-beige/90 leading-7">Leadership beyond construction and luxury interiors. Shaik Azaruddin delivers both Crown Home Spaces and Fighters Combat Academy with discipline, transformation, and premium excellence.</p>
+              <p className="mt-4 text-crown-beige/90 leading-7">Leadership beyond construction and construction interiors. Shaik Azaruddin delivers both Crown Home Spaces and Fighters Combat Academy with discipline, transformation, and premium excellence.</p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-3xl bg-white/5 p-5">
-                  <p className="text-3xl font-semibold text-white">11+</p>
-                  <p className="mt-2 text-sm uppercase tracking-[0.35em] text-crown-gold">Years Experience</p>
-                </div>
-                <div className="rounded-3xl bg-white/5 p-5">
-                  <p className="text-3xl font-semibold text-white">30+</p>
-                  <p className="mt-2 text-sm uppercase tracking-[0.35em] text-crown-gold">Delivered Interior Projects</p>
-                </div>
+                <AnimatedCounter value={11} suffix="+" label="Years Experience" className="rounded-3xl bg-white/5 p-5 text-center" />
+                <AnimatedCounter value={30} suffix="+" label="Delivered Interior Projects" className="rounded-3xl bg-white/5 p-5 text-center" />
               </div>
             </div>
           </div>
@@ -184,7 +179,7 @@ const LiveProjects = () => {
             </div>
             <div className="grid gap-4">
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <p className="text-3xl font-semibold text-white">Luxury Interiors</p>
+                <p className="text-3xl font-semibold text-white">Construction Interiors</p>
                 <p className="mt-2 text-sm text-crown-beige/90">Premium design direction for curated living spaces.</p>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6">

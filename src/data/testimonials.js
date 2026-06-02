@@ -23,7 +23,7 @@ export const testimonials = [
   {
     name: 'Mr. Sunil Sharma',
     title: 'Interior Consultant',
-    quote: 'The luxury interior design package matched our highest expectations. The finish quality and attention to lighting were outstanding.',
+    quote: 'The construction interior design package matched our highest expectations. The finish quality and attention to lighting were outstanding.',
     company: 'Apex Design Studio'
   }
 ];

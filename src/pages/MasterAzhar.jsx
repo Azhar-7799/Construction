@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO.jsx';
+import AnimatedCounter from '../components/AnimatedCounter.jsx';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { businessStreetAddress, businessLocality, businessRegion, businessCountry } from '../constants/location.js';
 import image2 from "../assets/images/founder/image2.png";
@@ -17,7 +18,7 @@ const Hero = ({ image }) => (
           Shaik Azaruddin — Founder of Crown Home Spaces
         </motion.h1>
         <motion.p initial={{ y: 24, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="hero-animate mt-6 max-w-xl text-lg text-crown-beige">
-          Luxury Interiors & Turnkey Projects Specialist, leading premium residential delivery and martial arts leadership across Hyderabad.
+          Construction Interiors & Turnkey Projects Specialist, leading premium residential delivery and martial arts leadership across Hyderabad.
         </motion.p>
 
         <div className="hero-animate mt-8 flex flex-wrap gap-3">
@@ -42,46 +43,51 @@ const Hero = ({ image }) => (
   </section>
 );
 
-const Counter = ({ value, label }) => {
-  const [num, setNum] = useState(0);
-  useEffect(() => {
-    let start = 0;
-    const dur = 1200;
-    const step = Math.ceil(value / (dur / 50));
-    const id = setInterval(() => {
-      start += step;
-      if (start >= value) {
-        setNum(value);
-        clearInterval(id);
-      } else setNum(start);
-    }, 50);
-    return () => clearInterval(id);
-  }, [value]);
-
-  return (
-    <div className="rounded-xl bg-white/3 p-6 text-center">
-      <p className="text-3xl font-semibold text-white">{num}</p>
-      <p className="mt-2 text-sm text-crown-beige">{label}</p>
-    </div>
-  );
-};
 
 const Gallery = ({ images }) => {
   const [open, setOpen] = useState(false);
   const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const restoreOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = restoreOverflow;
+    };
+  }, [open]);
+
   if (!images || images.length === 0) return null;
   return (
     <section className="section-animate mx-auto max-w-7xl px-6 py-20">
       <h3 className="text-xl font-semibold text-crown-gold">Gallery</h3>
       <div className="mt-6 columns-2 gap-4 sm:columns-3 lg:columns-4">
         {images.map((src, i) => (
-          <motion.img key={i} src={src} onClick={() => { setIdx(i); setOpen(true); }} whileHover={{ scale: 1.03 }} className="mb-4 w-full cursor-pointer rounded-xl object-cover" alt={`Shaik Azaruddin ${i + 1}`} loading="lazy" />
+          <motion.img
+            key={i}
+            src={src}
+            onClick={() => { setIdx(i); setOpen(true); }}
+            whileHover={{ scale: 1.03 }}
+            className="mb-4 w-full cursor-pointer rounded-xl object-cover"
+            alt={`Shaik Azaruddin ${i + 1}`}
+            loading="lazy"
+          />
         ))}
       </div>
 
       {open && (
-        <div onClick={() => setOpen(false)} className="fixed inset-0 z-70 flex items-center justify-center bg-black/80 p-6">
-          <img src={images[idx]} alt={`preview ${idx + 1}`} loading="eager" className="max-h-[90vh] max-w-full rounded-lg object-contain" />
+        <div onClick={() => setOpen(false)} className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 p-6">
+          <div className="relative mx-auto max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button type="button" onClick={() => setOpen(false)} aria-label="Close gallery image" className="absolute right-3 top-3 z-[10000] rounded-full bg-black/70 p-3 text-white transition hover:bg-black/80">Close</button>
+            <img src={images[idx]} alt={`preview ${idx + 1}`} loading="eager" className="max-h-[90vh] max-w-full rounded-lg object-contain" />
+          </div>
         </div>
       )}
     </section>
@@ -156,7 +162,7 @@ const MasterAzhar = () => {
         ],
         jobTitle: 'Founder of Crown Home Spaces & Fighters Combat Academy',
         image: founderImage,
-        description: 'Shaik Azaruddin leads Crown Home Spaces and Fighters Combat Academy, delivering luxury interiors, turnkey project excellence, and martial arts mentorship in Hyderabad.'
+        description: 'Shaik Azaruddin leads Crown Home Spaces and Fighters Combat Academy, delivering construction interiors, turnkey project excellence, and martial arts mentorship in Hyderabad.'
       },
       {
         '@type': 'Organization',
@@ -214,7 +220,7 @@ const MasterAzhar = () => {
             name: 'Who is Shaik Azaruddin?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Shaik Azaruddin is the founder of Crown Home Spaces and Fighters Combat Academy, known for luxury interiors, turnkey delivery, and martial arts mentorship in Hyderabad.'
+              text: 'Shaik Azaruddin is the founder of Crown Home Spaces and Fighters Combat Academy, known for construction interiors, turnkey delivery, and martial arts mentorship in Hyderabad.'
             }
           },
           {
@@ -222,7 +228,7 @@ const MasterAzhar = () => {
             name: 'What services does Crown Home Spaces offer?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Crown Home Spaces delivers premium interiors, architectural design, construction management, and luxury project execution.'
+              text: 'Crown Home Spaces delivers premium construction interiors, architectural design, construction management, and high-end project execution.'
             }
           }
         ]
@@ -234,10 +240,10 @@ const MasterAzhar = () => {
     <div ref={sectionRef} className="relative bg-crown-dark text-white">
       <SEO
         title="Master Azhar & Shaik Azaruddin | Crown Home Spaces Hyderabad"
-        description="Shaik Azaruddin and Master Azhar lead Crown Home Spaces and Fighters Combat Academy in Hyderabad. Experts in luxury interiors, turnkey projects, leadership, entrepreneurship, and martial arts excellence."
+        description="Shaik Azaruddin and Master Azhar lead Crown Home Spaces and Fighters Combat Academy in Hyderabad. Experts in construction interiors, turnkey projects, leadership, entrepreneurship, and martial arts excellence."
         url="https://crownhomespaces.com/master-azhar"
         image={founderImage}
-        keywords="Shaik Azaruddin, Master Azhar, Crown Home Spaces Founder, Luxury Interiors Hyderabad, Turnkey Projects Hyderabad, Fighters Combat Academy"
+        keywords="Shaik Azaruddin, Master Azhar, Crown Home Spaces Founder, Construction Interiors Hyderabad, Turnkey Projects Hyderabad, Fighters Combat Academy"
       >
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </SEO>
@@ -248,7 +254,7 @@ const MasterAzhar = () => {
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-2xl font-semibold text-crown-gold">About Shaik Azaruddin</h3>
-            <p className="mt-6 text-crown-beige leading-relaxed">Shaik Azaruddin leads Crown Home Spaces as the founder and luxury interiors specialist. His leadership blends cinematic aesthetics, turnkey delivery, and enterprise-grade project execution for Hyderabad’s most discerning clients.</p>
+            <p className="mt-6 text-crown-beige leading-relaxed">Shaik Azaruddin leads Crown Home Spaces as the founder and construction interiors specialist. His leadership blends cinematic aesthetics, turnkey delivery, and enterprise-grade project execution for Hyderabad’s most discerning clients.</p>
             <p className="mt-4 text-crown-beige leading-relaxed">He also operates Fighters Combat Academy under the identity of Master Azhar, pairing disciplined martial arts mastery with premium brand storytelling.</p>
           </div>
 
@@ -256,17 +262,17 @@ const MasterAzhar = () => {
             <div className="rounded-2xl border border-white/5 bg-white/5 p-6">
               <h4 className="text-sm font-semibold text-crown-beige uppercase">Leadership & Achievements</h4>
               <ul className="mt-4 space-y-2 text-crown-beige">
-                <li>Delivered 100+ luxury projects across Telangana</li>
+                <li>Delivered 100+ construction projects across Telangana</li>
                 <li>Recognized for cinematic interior storytelling</li>
                 <li>Founder & mentor at Fighters Combat Academy</li>
               </ul>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <Counter value={30} label="Interior Projects Delivered" />
-              <Counter value={11} label="Years Experience" />
-              <Counter value={30} label="Telangana Areas Served" />
-              <Counter value={48} label="Leadership Team" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <AnimatedCounter value={30} suffix="+" label="Interior Projects Delivered" className="rounded-xl bg-white/3 p-6 text-center" />
+              <AnimatedCounter value={11} suffix="+" label="Years Experience" className="rounded-xl bg-white/3 p-6 text-center" />
+              <AnimatedCounter value={30} suffix="+" label="Telangana Areas Served" className="rounded-xl bg-white/3 p-6 text-center" />
+              <AnimatedCounter value={48} suffix="+" label="Leadership Team" className="rounded-xl bg-white/3 p-6 text-center" />
             </div>
           </div>
         </div>
@@ -301,7 +307,7 @@ const MasterAzhar = () => {
       <section className="section-animate mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-3xl border border-white/5 bg-gradient-to-r from-black/40 to-black/20 p-10 text-center">
           <h4 className="text-2xl font-semibold text-white">Work with Master Azhar</h4>
-          <p className="mt-4 text-crown-beige">Book a consultation for luxury interiors, construction leadership, or martial arts mentorship.</p>
+          <p className="mt-4 text-crown-beige">Book a consultation for construction interiors, construction leadership, or martial arts mentorship.</p>
           <div className="mt-6 flex items-center justify-center gap-4">
             <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark">WhatsApp</a>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-crown-gold px-6 py-3 text-sm text-crown-beige">Contact Founder</Link>

@@ -14,10 +14,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   background: radial-gradient(circle at top, rgba(198,156,109,0.12), transparent 24%), linear-gradient(180deg, #120d09 0%, #080503 100%);
   color: #f4ede2;
 }

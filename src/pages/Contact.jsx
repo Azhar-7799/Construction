@@ -20,14 +20,14 @@ const Contact = () => {
 
   return (
     <>
-      <SEO title="Contact | Crown Home Spaces" description={`Contact Crown Home Spaces at ${businessStreetAddress} for luxury interiors, turnkey projects, and elite architectural services in Hyderabad.`} />
+      <SEO title="Contact | Crown Home Spaces" description={`Contact Crown Home Spaces at ${businessStreetAddress} for construction interiors, turnkey projects, and elite architectural services in Hyderabad.`} />
       <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Contact</p>
             <h1 className="mt-4 text-5xl font-semibold text-white sm:text-6xl">Connect with our Kondapur team for your next premium project.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-crown-beige/90">
-              Reach out by WhatsApp, email, phone, or the contact form. We respond swiftly and provide detailed guidance for luxury interiors, construction, and architectural services.
+              Reach out by WhatsApp, email, phone, or the contact form. We respond swiftly and provide detailed guidance for construction interiors, construction, and architectural services.
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               <div className="rounded-[32px] border border-white/10 bg-white/5 p-8">

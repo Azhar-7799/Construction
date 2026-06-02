@@ -2,23 +2,24 @@ import { Helmet } from 'react-helmet-async';
 import { businessStreetAddress, businessLocality, businessRegion, businessCountry, googleMapsUrl } from '../constants/location.js';
 
 const defaultMeta = {
-  title: 'Crown Home Spaces | Luxury Interiors & Turnkey Projects in Kondapur',
-  description: `Crown Home Spaces is a premium luxury interiors and turnkey projects company based at ${businessStreetAddress}, delivering elite architecture, residential construction, and premium interior experiences.`,
+  title: 'Crown Home Spaces | Construction & Interior Services in Kondapur',
+  description: `Crown Home Spaces is a premium construction and interior company based at ${businessStreetAddress}, delivering elite architecture, residential construction, and project delivery across Hyderabad.`,
   url: 'https://crownhomespaces.com',
   image: 'https://crownhomespaces.com/og-image.jpg',
-  keywords: 'Luxury Interiors Hyderabad, Best Interior Designers Hyderabad, Turnkey Projects Hyderabad, Premium Interiors Hyderabad, Villa Interior Designers Hyderabad, Crown Home Spaces Hyderabad'
+  keywords: 'Construction Hyderabad, Interior Designers Hyderabad, Turnkey Projects Hyderabad, Premium Construction Services Hyderabad, Crown Home Spaces Hyderabad'
 };
 
-const SEO = ({ title, description, url, image, keywords, children }) => {
+const SEO = ({ title, description, url, image, keywords, canonical, structuredData, children }) => {
   const meta = {
     title: title || defaultMeta.title,
     description: description || defaultMeta.description,
     url: url || defaultMeta.url,
     image: image || defaultMeta.image,
-    keywords: keywords || defaultMeta.keywords
+    keywords: keywords || defaultMeta.keywords,
+    canonical: canonical || url || defaultMeta.url
   };
 
-  const jsonLd = {
+  const defaultJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
@@ -77,7 +78,7 @@ const SEO = ({ title, description, url, image, keywords, children }) => {
             closes: '19:00'
           }
         ],
-        serviceType: 'Luxury Interiors & Turnkey Projects'
+        serviceType: 'Construction and Interior Services'
       },
       {
         '@type': 'ProfessionalService',
@@ -105,17 +106,19 @@ const SEO = ({ title, description, url, image, keywords, children }) => {
       <title>{meta.title}</title>
       <meta name="description" content={meta.description} />
       <meta name="keywords" content={meta.keywords} />
-      <link rel="canonical" href={meta.url} />
+      <link rel="canonical" href={meta.canonical} />
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={meta.url} />
+      <meta property="og:url" content={meta.canonical} />
       <meta property="og:image" content={meta.image} />
+      <meta property="og:site_name" content="Crown Home Spaces" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />
-      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      <script type="application/ld+json">{JSON.stringify(defaultJsonLd)}</script>
+      {structuredData && <script type="application/ld+json">{JSON.stringify(structuredData)}</script>}
       {children}
     </Helmet>
   );

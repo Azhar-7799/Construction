@@ -13,7 +13,7 @@ export const team = [
     name: 'Azaruddin',
     role: 'Director of Design & Delivery',
     summary:
-      'Experienced leader focused on luxury interior delivery, turnkey project coordination, and premium residential execution with a commitment to quality, aesthetics, and strategic craftsmanship.',
+      'Experienced leader focused on construction interior delivery, turnkey project coordination, and premium residential execution with a commitment to quality, aesthetics, and strategic craftsmanship.',
     skills: [
       'Structural Planning',
       'Site Execution',
@@ -57,10 +57,10 @@ export const team = [
     name: 'Kavya Reddy',
     role: 'Interior Design Specialist',
     summary:
-      'Creative interior design specialist focused on modern luxury interiors, space planning, elegant aesthetics, smart home concepts, and premium residential styling.',
+      'Creative interior design specialist focused on modern construction interiors, space planning, elegant aesthetics, smart home concepts, and premium residential styling.',
     experience: '3+ Years',
     projects: '40+ Interior Projects',
-    skills: ['Luxury Interiors', 'Space Planning', 'Modern Design Concepts', 'Residential Styling'],
+    skills: ['Construction Interiors', 'Space Planning', 'Modern Design Concepts', 'Residential Styling'],
     image: teamImages['kavya.jpg'] || '',
     socials: {
       linkedin: 'https://www.linkedin.com/',

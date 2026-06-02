@@ -2,10 +2,27 @@ import { projects } from '../data/projects.js';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Projects = () => {
   const [selected, setSelected] = useState(null);
+
+  useEffect(() => {
+    if (!selected) return undefined;
+    const restoreOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setSelected(null);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = restoreOverflow;
+    };
+  }, [selected]);
+
   return (
     <>
     <SEO title="Projects | Crown Home Spaces" description="Explore our luxury construction and interior design project portfolio across Hyderabad." />
@@ -46,9 +63,9 @@ const Projects = () => {
 
         {/* Fullscreen image modal for project previews */}
         {selected && (
-          <div className="fixed inset-0 z-70 flex items-center justify-center bg-black/85 p-6" onClick={() => setSelected(null)}>
-              <div className="relative mx-auto max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
-              <button type="button" onClick={() => setSelected(null)} aria-label="Close image" className="absolute right-2 top-2 z-80 pointer-events-auto rounded-full bg-black/60 p-3 text-white">Close</button>
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-6" onClick={() => setSelected(null)}>
+            <div className="relative mx-auto max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+              <button type="button" onClick={() => setSelected(null)} aria-label="Close image" className="absolute right-3 top-3 z-[10000] rounded-full bg-black/70 p-3 text-white transition hover:bg-black/80">Close</button>
               <img src={selected} alt="Project preview" loading="eager" className="max-h-[90vh] w-full object-contain rounded-lg" />
             </div>
           </div>

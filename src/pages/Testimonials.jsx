@@ -4,7 +4,7 @@ import SEO from '../components/SEO.jsx';
 
 const Testimonials = () => (
   <>
-    <SEO title="Testimonials | Crown Home Spaces" description="Client testimonials for Crown Home Spaces' luxury interior and construction projects." />
+    <SEO title="Testimonials | Crown Home Spaces" description="Client testimonials for Crown Home Spaces' construction interior and construction projects." />
     <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">

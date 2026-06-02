@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
 import DefaultLayout from './layouts/DefaultLayout.jsx';
 import AppRoutes from './routes/AppRoutes.jsx';
@@ -28,7 +29,9 @@ function App() {
         transition={{ duration: 0.55, ease: 'easeOut' }}
         className="min-h-screen bg-crown-dark text-white"
       >
-        <RouterProvider router={router} />
+        <Suspense fallback={<div className="min-h-screen grid place-items-center bg-crown-dark text-white">Loading…</div>}>
+          <RouterProvider router={router} />
+        </Suspense>
       </motion.div>
     </AnimatePresence>
   );
