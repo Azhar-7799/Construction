@@ -44,6 +44,9 @@ const ServiceDetail = () => {
     url: canonical
   };
 
+  const titleShadow = { textShadow: '0 4px 20px rgba(0,0,0,0.8)' };
+  const bodyShadow = { textShadow: '0 2px 12px rgba(0,0,0,0.75)' };
+
   return (
     <>
       <SEO
@@ -57,31 +60,32 @@ const ServiceDetail = () => {
       />
 
       <section className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/85" />
-        <div className="absolute inset-0">
+        <div className="pointer-events-none absolute inset-0 z-0">
           <img 
             src={service.heroImage} 
-            alt={service.title} 
+            alt="" 
+            aria-hidden="true"
             className="h-full w-full object-cover" 
-            loading="lazy" 
+            loading="eager" 
             decoding="async"
             onError={(e) => {
               e.currentTarget.src = fallbackImage;
-              e.currentTarget.style.opacity = '0.7';
             }}
           />
         </div>
-        <div className="relative mx-auto flex max-w-7xl flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+        <div className="pointer-events-none absolute inset-0 z-10 bg-black/65" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-black/80 via-black/60 to-black/70" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-black/80" aria-hidden="true" />
+        <div className="relative z-20 mx-auto flex max-w-7xl flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-3xl space-y-6 text-white">
-            <p className="text-xs uppercase tracking-[0.35em] text-crown-gold drop-shadow-lg">Service</p>
-            <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl drop-shadow-2xl" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.9)' }}>{service.title}</h1>
-            <p className="max-w-2xl text-base leading-8 text-gray-100 sm:text-lg drop-shadow-lg" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.8)' }}>{service.heroTagline}</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-crown-gold drop-shadow-lg" style={bodyShadow}>Service</p>
+            <h1 className="text-4xl font-bold text-white drop-shadow-2xl sm:text-5xl lg:text-6xl" style={titleShadow}>{service.title}</h1>
+            <p className="max-w-2xl text-base leading-8 text-gray-100 drop-shadow-lg sm:text-lg" style={bodyShadow}>{service.heroTagline}</p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link to="/contact" className="inline-flex items-center justify-center rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">
+              <Link to="/contact" className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark shadow-lg transition hover:bg-white">
                 Request Consultation
               </Link>
-              <Link to="/services" className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20">
+              <Link to="/services" className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white shadow-lg backdrop-blur-sm transition hover:bg-white/20">
                 Explore All Services
               </Link>
             </div>
