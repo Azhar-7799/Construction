@@ -11,26 +11,36 @@ const navItems = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
-  { label: 'Live Projects', path: '/live-projects', shortLabel: 'Live' },
-  { label: 'Testimonials', path: '/testimonials', shortLabel: 'Reviews' },
+  { label: 'Live Projects', path: '/live-projects', short: 'Live' },
+  { label: 'Testimonials', path: '/testimonials', short: 'Reviews' },
   { label: 'Careers', path: '/careers' },
   { label: 'Founder', path: '/master-azhar' },
-  { label: 'Fighters Combat Academy', path: 'https://fighter-combat.vercel.app/', external: true, shortLabel: 'FCA' },
+  { label: 'Fighters Combat Academy', path: 'https://fighter-combat.vercel.app/', external: true, short: 'FCA' },
   { label: 'Contact', path: '/contact' },
   { label: 'Blog', path: '/blog' }
 ];
 
-export default function Header() {
+const desktopLink = (active) =>
+  `inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-md px-2 text-[10px] font-medium uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crown-gold lg:px-2.5 lg:text-[11px] lg:tracking-[0.1em] xl:px-3 xl:text-xs ${
+    active ? 'text-crown-gold' : 'text-crown-beige hover:text-white'
+  }`;
+
+const mobileLink = (active) =>
+  `flex min-h-[48px] items-center rounded-lg px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors ${
+    active ? 'bg-gray-100 font-semibold text-black' : 'text-gray-900 hover:bg-gray-100'
+  }`;
+
+const Header = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
   const [showMega, setShowMega] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setSticky(window.scrollY > 24);
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setSticky(window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
@@ -43,70 +53,111 @@ export default function Header() {
       document.body.style.overflow = '';
       return undefined;
     }
-    const previous = document.body.style.overflow;
+    const prev = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = previous;
+      document.body.style.overflow = prev;
     };
   }, [open]);
 
   useEffect(() => {
     if (!open) return undefined;
-    const onEscape = (e) => e.key === 'Escape' && setOpen(false);
-    window.addEventListener('keydown', onEscape);
-    return () => window.removeEventListener('keydown', onEscape);
+    const onKey = (e) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, [open]);
 
-  const closeMenu = () => setOpen(false);
+  const close = () => setOpen(false);
+
+  const navLabel = (item, full = false) => {
+    if (full || !item.short) return item.label;
+    return (
+      <>
+        <span className="min-[1536px]:hidden">{item.short}</span>
+        <span className="hidden min-[1536px]:inline">{item.label}</span>
+      </>
+    );
+  };
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 overflow-x-hidden transition-all duration-300 ${sticky || open ? 'border-b border-white/10 bg-crown-dark/90 shadow-lg backdrop-blur-md' : 'bg-transparent'}`}>
-      <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 sm:gap-5 xl:gap-6 2xl:gap-8">
-        <Link to="/" onClick={closeMenu} className="flex min-h-[44px] shrink-0 items-center gap-2 sm:gap-3 xl:max-w-[3.5rem] xl:pr-4 2xl:max-w-none 2xl:pr-6">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[10px] font-semibold text-crown-gold sm:h-10 sm:w-10 sm:text-xs 2xl:h-12 2xl:w-12 2xl:rounded-2xl 2xl:text-sm">CH</div>
-          <div className="hidden min-w-0 sm:block xl:hidden 2xl:block">
-            <p className="truncate text-[9px] uppercase leading-tight tracking-[0.22em] text-crown-beige 2xl:text-xs">Crown Home Spaces</p>
-            <p className="truncate text-[9px] font-medium leading-tight text-crown-gold sm:text-xs 2xl:text-sm">Construction & Interior</p>
-          </div>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-300 ${
+        sticky || open ? 'border-b border-white/10 bg-crown-dark/95 shadow-lg backdrop-blur-md' : 'bg-crown-dark/90 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none'
+      }`}
+    >
+      <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:h-16 sm:gap-3 sm:px-6 lg:px-8">
+        <Link to="/" onClick={close} className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[11px] font-bold text-crown-gold sm:h-10 sm:w-10">
+            CH
+          </span>
+          <span className="hidden max-w-[8rem] sm:block lg:max-w-[6rem] min-[1536px]:max-w-[9rem]">
+            <span className="block truncate text-[9px] font-medium uppercase tracking-[0.18em] text-crown-beige xl:text-[10px]">Crown Home Spaces</span>
+            <span className="block truncate text-[9px] text-crown-gold xl:text-[10px]">Construction & Interior</span>
+          </span>
         </Link>
 
-        <nav className="hidden min-w-0 items-center justify-center gap-x-1.5 px-2 xl:flex xl:gap-x-2 2xl:gap-x-2.5 2xl:px-4" aria-label="Main">
-          {navItems.map((item) => item.external ? (
-            <a key={item.path} href={item.path} target="_blank" rel="noreferrer" title={item.label} className="inline-flex min-h-[44px] shrink-0 items-center whitespace-nowrap rounded-lg px-2 py-2 text-[10px] uppercase tracking-[0.1em] text-crown-beige hover:bg-white/5 hover:text-white xl:px-2.5 xl:text-[11px] 2xl:px-3 2xl:text-xs">
-              <span className="2xl:hidden">{item.shortLabel ?? item.label}</span>
-              <span className="hidden 2xl:inline">{item.label}</span>
-            </a>
-          ) : (
-            <div key={item.path} className="shrink-0" onMouseEnter={() => item.label === 'Services' && setShowMega(true)} onMouseLeave={() => item.label === 'Services' && setShowMega(false)}>
-              <NavLink to={item.path} end={item.path === '/'} className={({ isActive }) => `inline-flex min-h-[44px] shrink-0 items-center whitespace-nowrap rounded-lg px-2 py-2 text-[10px] uppercase tracking-[0.1em] xl:px-2.5 xl:text-[11px] 2xl:px-3 2xl:text-xs ${isActive ? 'bg-white/10 text-crown-gold' : 'text-crown-beige hover:bg-white/5 hover:text-white'}`}>
-                <span className="2xl:hidden">{item.shortLabel ?? item.label}</span>
-                <span className="hidden 2xl:inline">{item.label}</span>
-              </NavLink>
-            </div>
-          ))}
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 overflow-hidden lg:flex" aria-label="Main navigation">
+          {navItems.map((item) =>
+            item.external ? (
+              <a key={item.path} href={item.path} target="_blank" rel="noreferrer" title={item.label} className={desktopLink(false)}>
+                {navLabel(item)}
+              </a>
+            ) : (
+              <div
+                key={item.path}
+                className="shrink-0"
+                onMouseEnter={() => item.path === '/services' && setShowMega(true)}
+                onMouseLeave={() => item.path === '/services' && setShowMega(false)}
+              >
+                <NavLink to={item.path} end={item.path === '/'} className={({ isActive }) => desktopLink(isActive)}>
+                  {navLabel(item)}
+                </NavLink>
+              </div>
+            )
+          )}
         </nav>
 
-        <div className="flex shrink-0 items-center justify-end gap-2 xl:gap-3 xl:pl-4 2xl:pl-6">
-          <div className="hidden items-center gap-2 border-l border-white/10 pl-4 xl:flex 2xl:gap-3 2xl:pl-6">
-            <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="inline-flex min-h-[44px] shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-crown-gold/50 bg-crown-gold/10 px-3 py-2 text-xs text-crown-gold hover:bg-crown-gold/20 2xl:gap-2 2xl:px-4 2xl:text-sm"><FaWhatsapp size={16} /> WhatsApp</a>
-            <Link to="/contact" className="inline-flex min-h-[44px] shrink-0 items-center whitespace-nowrap rounded-full bg-crown-gold px-4 py-2 text-xs font-semibold text-crown-dark hover:bg-white 2xl:px-5 2xl:text-sm">Get Quote</Link>
-          </div>
-          <button type="button" onClick={() => setOpen((p) => !p)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? 'Close menu' : 'Open menu'} className="inline-flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold xl:hidden">
+        <div className="ml-auto flex shrink-0 items-center gap-2">
+          <a
+            href="https://wa.me/919553041347"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden h-10 items-center gap-1.5 rounded-full border border-crown-gold/40 bg-crown-gold/10 px-3 text-xs text-crown-gold hover:bg-crown-gold/20 lg:inline-flex xl:px-4"
+          >
+            <FaWhatsapp size={15} aria-hidden="true" />
+            <span className="hidden xl:inline">WhatsApp</span>
+          </a>
+          <Link to="/contact" className="hidden h-10 items-center rounded-full bg-crown-gold px-4 text-xs font-semibold text-crown-dark hover:bg-white lg:inline-flex">
+            Get Quote
+          </Link>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold lg:hidden"
+          >
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
-        </div>
         </div>
       </div>
 
       <AnimatePresence>
         {showMega && (
-          <motion.div initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} onMouseEnter={() => setShowMega(true)} onMouseLeave={() => setShowMega(false)} className="absolute left-1/2 top-full z-40 hidden w-[min(95vw,72rem)] -translate-x-1/2 translate-y-1 rounded-b-2xl border border-white/10 bg-crown-dark/95 px-6 py-8 shadow-2xl backdrop-blur-md xl:block">
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            onMouseEnter={() => setShowMega(true)}
+            onMouseLeave={() => setShowMega(false)}
+            className="absolute left-1/2 top-full z-40 hidden w-[min(96vw,72rem)] -translate-x-1/2 border border-white/10 bg-crown-dark/98 px-4 py-6 shadow-2xl backdrop-blur-md lg:block"
+          >
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
               {servicesMenu.map((service) => (
-                <Link key={service.title} to={service.path} className="flex min-h-[44px] flex-col justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 hover:border-crown-gold/50 hover:bg-white/10">
-                  <p className="text-sm font-semibold text-white">{service.title}</p>
-                  <p className="mt-1 line-clamp-2 text-xs text-crown-beige/80">{service.description}</p>
+                <Link key={service.title} to={service.path} className="rounded-xl border border-white/10 bg-white/5 p-3 hover:border-crown-gold/40 hover:bg-white/10">
+                  <p className="text-xs font-semibold text-white">{service.title}</p>
+                  <p className="mt-1 line-clamp-2 text-[10px] text-crown-beige/80">{service.description}</p>
                 </Link>
               ))}
             </div>
@@ -117,38 +168,76 @@ export default function Header() {
       <AnimatePresence>
         {open && (
           <>
-            <motion.button type="button" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} aria-label="Close menu" onClick={closeMenu} className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm xl:hidden" />
-            <motion.div id="mobile-navigation" role="dialog" aria-modal="true" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'tween', duration: 0.28 }} className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col border-l border-white/10 bg-crown-dark shadow-2xl xl:hidden">
-              <div className="flex items-center justify-between border-b border-white/10 px-4 py-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-crown-gold">Menu</p>
-                <button type="button" onClick={closeMenu} aria-label="Close menu" className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-crown-gold/40 text-crown-gold"><FiX size={22} /></button>
+            <motion.button
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              aria-label="Close menu"
+              onClick={close}
+              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden"
+            />
+            <motion.aside
+              id="mobile-navigation"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile navigation"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.25 }}
+              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden"
+            >
+              <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Navigation</p>
+                <button type="button" onClick={close} aria-label="Close menu" className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100">
+                  <FiX size={22} />
+                </button>
               </div>
+
               <nav className="flex-1 overflow-y-auto px-3 py-4">
-                {navItems.map((item) => item.external ? (
-                  <a key={item.label} href={item.path} target="_blank" rel="noreferrer" onClick={closeMenu} className="flex min-h-[48px] items-center rounded-xl px-4 py-3 text-sm uppercase tracking-[0.2em] text-crown-beige hover:bg-white/5 hover:text-white">{item.label}</a>
-                ) : (
-                  <NavLink key={item.label} to={item.path} end={item.path === '/'} onClick={closeMenu} className={({ isActive }) => `flex min-h-[48px] items-center rounded-xl px-4 py-3 text-sm uppercase tracking-[0.2em] ${isActive ? 'bg-white/10 text-crown-gold' : 'text-crown-beige hover:bg-white/5 hover:text-white'}`}>{item.label}</NavLink>
-                ))}
-                <div className="mt-6 border-t border-white/10 pt-6">
-                  <p className="mb-3 px-4 text-xs uppercase tracking-[0.3em] text-crown-gold">Services</p>
+                {navItems.map((item) =>
+                  item.external ? (
+                    <a key={item.label} href={item.path} target="_blank" rel="noreferrer" onClick={close} className={mobileLink(false)}>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <NavLink key={item.label} to={item.path} end={item.path === '/'} onClick={close} className={({ isActive }) => mobileLink(isActive)}>
+                      {item.label}
+                    </NavLink>
+                  )
+                )}
+                <div className="mt-6 border-t border-gray-200 pt-4">
+                  <p className="mb-2 px-4 text-xs font-semibold uppercase tracking-widest text-gray-500">Services</p>
                   {servicesMenu.map((service) => (
-                    <Link key={service.title} to={service.path} onClick={closeMenu} className="flex min-h-[48px] flex-col justify-center rounded-xl px-4 py-3 hover:bg-white/5">
-                      <span className="text-sm font-medium text-white">{service.title}</span>
-                      <span className="line-clamp-1 text-xs text-crown-beige/80">{service.description}</span>
+                    <Link key={service.title} to={service.path} onClick={close} className="block rounded-lg px-4 py-3 text-sm text-gray-900 hover:bg-gray-100">
+                      {service.title}
                     </Link>
                   ))}
                 </div>
               </nav>
-              <div className="border-t border-white/10 px-4 py-5 space-y-2">
-                <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="flex min-h-[48px] items-center gap-3 rounded-xl border border-crown-gold/30 bg-crown-gold/10 px-4 text-sm text-crown-gold"><FaWhatsapp size={18} /> +91 95530 41347</a>
-                <a href="mailto:crownhomespaces@gmail.com" className="flex min-h-[48px] items-center gap-3 rounded-xl px-4 text-sm text-crown-beige hover:bg-white/5"><FiMail size={18} /> Email Us</a>
-                <a href={googleMapsUrl} target="_blank" rel="noreferrer" className="flex min-h-[48px] items-center gap-3 rounded-xl px-4 text-sm text-crown-beige hover:bg-white/5"><FiMapPin size={18} className="flex-shrink-0" /><span className="line-clamp-2">{businessStreetAddress}</span></a>
-                <Link to="/contact" onClick={closeMenu} className="mt-2 flex min-h-[48px] w-full items-center justify-center rounded-full bg-crown-gold text-sm font-semibold text-crown-dark hover:bg-white">Get Quote</Link>
+
+              <div className="space-y-2 border-t border-gray-200 bg-gray-50 p-4">
+                <a href="https://wa.me/919553041347" target="_blank" rel="noreferrer" className="flex min-h-[48px] items-center gap-3 rounded-lg border border-crown-gold/30 bg-white px-4 text-sm font-medium text-gray-900">
+                  <FaWhatsapp className="text-crown-gold" /> +91 95530 41347
+                </a>
+                <a href="mailto:crownhomespaces@gmail.com" className="flex min-h-[48px] items-center gap-3 rounded-lg px-4 text-sm text-gray-900 hover:bg-gray-100">
+                  <FiMail /> Email Us
+                </a>
+                <a href={googleMapsUrl} target="_blank" rel="noreferrer" className="flex min-h-[48px] items-center gap-3 rounded-lg px-4 text-sm text-gray-900 hover:bg-gray-100">
+                  <FiMapPin className="shrink-0" />
+                  <span className="line-clamp-2">{businessStreetAddress}</span>
+                </a>
+                <Link to="/contact" onClick={close} className="flex min-h-[48px] items-center justify-center rounded-full bg-crown-gold text-sm font-semibold text-crown-dark hover:bg-white">
+                  Get Quote
+                </Link>
               </div>
-            </motion.div>
+            </motion.aside>
           </>
         )}
       </AnimatePresence>
     </header>
   );
-}
+};
+
+export default Header;

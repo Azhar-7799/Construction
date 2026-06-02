@@ -27,7 +27,7 @@ const Services = () => (
               className="group rounded-2xl sm:rounded-[32px] border border-white/10 bg-white/5 p-0 sm:p-0 md:p-0 overflow-hidden transition hover:border-crown-gold/30 hover:bg-white/10"
             >
               <div className="h-48 w-full overflow-hidden bg-black/10">
-                <img src={service.image} alt={service.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                <img src={service.image} alt={service.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" onError={(e) => { e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%231c140f" width="400" height="300"/%3E%3C/svg%3E'; }} />
               </div>
               <div className="p-5 sm:p-6 md:p-8">
                 <motion.p whileHover={{ y: -4 }} className="text-2xl sm:text-3xl text-crown-gold">

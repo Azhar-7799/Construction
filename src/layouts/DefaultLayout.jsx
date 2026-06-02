@@ -7,7 +7,7 @@ const DefaultLayout = () => (
   <div className="relative overflow-hidden bg-crown-dark text-white">
     <Header />
     <ScrollToTop />
-    <main className="relative z-10">
+    <main className="relative z-10 pt-14 sm:pt-16">
       <Outlet />
     </main>
     <Footer />

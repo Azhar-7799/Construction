@@ -1,12 +1,31 @@
 import { businessStreetAddress } from '../constants/location.js';
 
+export const serviceHeroImages = {
+  'construction-interior-design':
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=90',
+  'residential-construction':
+    'https://images.unsplash.com/photo-1590644365607-5c9f47b15a96?auto=format&fit=crop&w=1600&q=90',
+  'turnkey-projects':
+    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=90',
+  'architectural-elevations':
+    'https://images.unsplash.com/photo-1486718448742-af81f63d0907?auto=format&fit=crop&w=1600&q=90',
+  'commercial-construction':
+    'https://images.unsplash.com/photo-1541976590039-688ffc4e6f73?auto=format&fit=crop&w=1600&q=90',
+  'hospitality-projects':
+    'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=90',
+  'commercial-interior':
+    'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1600&q=90',
+  'construction-management':
+    'https://images.unsplash.com/photo-1581094799209-407adf9a9acb?auto=format&fit=crop&w=1600&q=90'
+};
+
 export const servicePages = [
   {
     slug: 'construction-interior-design',
     title: 'Construction Interior Design',
     description: 'Premium construction interior design for Hyderabad residences, offices, and hospitality spaces.',
     icon: '✦',
-    heroImage: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1400&q=85',
+    heroImage: serviceHeroImages['construction-interior-design'],
     heroTagline: 'Integrated design, material intelligence, and construction-grade execution for elite interiors.',
     pageTitle: 'Construction Interior Design Services in Hyderabad | Crown Home Spaces',
     metaDescription: 'Premium construction interior design services in Hyderabad delivering elegant residential, hospitality, and office interiors with full project delivery.',
@@ -59,7 +78,7 @@ For residential homes in Banjara Hills and premium offices in the Financial Dist
     title: 'Residential Construction',
     description: 'High-performing residential construction services for villas, duplex homes, and premium apartments in Hyderabad.',
     icon: '⌂',
-    heroImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80',
+    heroImage: serviceHeroImages['residential-construction'],
     heroTagline: 'Reliable residential construction from foundation to finishing with Hyderabad local knowledge.',
     pageTitle: 'Residential Construction Company in Hyderabad | Crown Home Spaces',
     metaDescription: 'Trusted residential construction services in Hyderabad for villas, penthouses, and premium homes with quality supervision and timely delivery.',
@@ -112,7 +131,7 @@ Because we build in Hyderabad’s most discerning neighborhoods, we are highly f
     title: 'Turnkey Projects',
     description: 'End-to-end turnkey execution for Hyderabad luxury residences, showroom spaces, and curated experience environments.',
     icon: '✧',
-    heroImage: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
+    heroImage: serviceHeroImages['turnkey-projects'],
     heroTagline: 'Single-source turnkey delivery that combines strategy, design, construction, and finishing into one trusted project experience.',
     pageTitle: 'Turnkey Project Delivery in Hyderabad | Crown Home Spaces',
     metaDescription: 'Turnkey project delivery in Hyderabad for luxury homes, premium offices, and hospitality spaces with one-point accountability and superior craftsmanship.',
@@ -164,7 +183,7 @@ As a Hyderabad-based turnkey services provider, we are also adept at local sourc
     title: 'Architectural Elevations',
     description: 'Façade design and elevation services for Hyderabad residential, commercial and institutional buildings.',
     icon: '⎔',
-    heroImage: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80',
+    heroImage: serviceHeroImages['architectural-elevations'],
     heroTagline: 'Creating façades that express brand, context, and technical excellence across city and campus settings.',
     pageTitle: 'Architectural Elevations Services in Hyderabad | Crown Home Spaces',
     metaDescription: 'Architectural elevations services in Hyderabad providing premium façade design, build coordination, and visual impact for luxury projects.',
@@ -216,7 +235,7 @@ Our architectural elevation service is ideal for premium residences, office towe
     title: 'Commercial Construction',
     description: 'Reliable commercial construction services for offices, retail, and institutional buildings in Hyderabad.',
     icon: '🏗️',
-    heroImage: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
+    heroImage: serviceHeroImages['commercial-construction'],
     heroTagline: 'Commercial construction managed with precise execution, code compliance, and a Hyderabad-focused delivery model.',
     pageTitle: 'Commercial Construction Services in Hyderabad | Crown Home Spaces',
     metaDescription: 'Commercial construction services in Hyderabad for offices, retail spaces, and premium workplace buildings with timely delivery and quality control.',
@@ -268,7 +287,7 @@ Because commercial clients require performance, we also prioritize build sequenc
     title: 'Hospitality Projects',
     description: 'Hospitality design and construction services for restaurants, hotels, and experiential venues in Hyderabad.',
     icon: '🏨',
-    heroImage: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
+    heroImage: serviceHeroImages['hospitality-projects'],
     heroTagline: 'Hospitality spaces designed for memorable guest experiences, elegant atmospheres, and premium operational flow.',
     pageTitle: 'Hospitality Interior Design Experts in Hyderabad | Crown Home Spaces',
     metaDescription: 'Hospitality project specialists in Hyderabad delivering premium hotel, restaurant, and leisure interiors with guest-centric detail and refined construction.',
@@ -320,7 +339,7 @@ The hospitality projects we deliver are also brand-sensitive. Each venue is desi
     title: 'Commercial Interior',
     description: 'High-performance commercial interior design and delivery for offices, showrooms, and corporate spaces.',
     icon: '🏢',
-    heroImage: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80',
+    heroImage: serviceHeroImages['commercial-interior'],
     heroTagline: 'Commercial interiors that reflect brand identity while supporting productivity and operational excellence.',
     pageTitle: 'Commercial Interior Design Hyderabad | Crown Home Spaces',
     metaDescription: 'Commercial interior design services in Hyderabad for office spaces, showrooms, and corporate environments with premium quality and brand-led solutions.',
@@ -372,7 +391,7 @@ With experience in Hitech City and Hyderabad’s Financial District, we understa
     title: 'Construction Management',
     description: 'Dedicated construction management services for Hyderabad projects with a focus on cost, schedule, and quality.',
     icon: '⚙',
-    heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=85',
+    heroImage: serviceHeroImages['construction-management'],
     heroTagline: 'Construction management that brings clarity, accountability, and performance to every project delivery.',
     pageTitle: 'Construction Management Services in Hyderabad | Crown Home Spaces',
     metaDescription: 'Construction management services in Hyderabad for residential, commercial, and hospitality projects delivering disciplined planning, supplier coordination, and quality oversight.',
