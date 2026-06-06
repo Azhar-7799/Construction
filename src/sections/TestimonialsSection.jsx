@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
               <div className="flex-shrink-0">
                 <div className="h-20 w-20 overflow-hidden rounded-2xl border border-crown-gold/30 bg-crown-rich">
-                  <img src={featured.image || '/src/assets/images/team-placeholder.jpg'} alt={featured.name} loading="lazy" className="h-full w-full object-cover" />
+                  <img src={featured.image || 'https://images.unsplash.com/photo-1603415526960-f7e0328c80d6?auto=format&fit=crop&w=800&q=80'} alt={featured.name} loading="lazy" className="h-full w-full object-cover" />
                 </div>
               </div>
               <div>

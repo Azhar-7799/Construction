@@ -81,20 +81,20 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-40 w-full transition-all duration-300 ${
         sticky || open ? 'border-b border-white/10 bg-crown-dark/95 shadow-lg backdrop-blur-md' : 'bg-crown-dark/90 backdrop-blur-sm'
       }`}
     >
       <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-2 px-4 py-1 sm:min-h-16 sm:gap-3 sm:px-6 lg:gap-4 lg:px-8">
-        <Link to="/" onClick={close} className="flex min-w-fit shrink-0 items-center gap-2 sm:gap-3">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[11px] font-bold text-crown-gold sm:h-10 sm:w-10">
+        <Link to="/" onClick={close} className="flex min-w-fit shrink-0 items-center gap-2 sm:gap-3 overflow-hidden">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[11px] font-bold text-crown-gold sm:h-10 sm:w-10 flex-shrink-0">
             CH
           </span>
-          <span className="min-w-fit shrink-0">
-            <span className="block whitespace-nowrap text-sm font-bold tracking-wide text-crown-beige sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+          <span className="min-w-fit shrink-0 overflow-hidden">
+            <span className="block whitespace-nowrap text-sm font-bold tracking-wide text-crown-beige sm:text-base md:text-lg lg:text-xl xl:text-2xl overflow-hidden text-ellipsis">
               Crown Home Spaces
             </span>
-            <span className="block whitespace-nowrap text-[10px] font-medium tracking-wide text-crown-gold sm:text-xs md:text-sm">
+            <span className="block whitespace-nowrap text-[10px] font-medium tracking-wide text-crown-gold sm:text-xs md:text-sm overflow-hidden text-ellipsis">
               Construction & Interior
             </span>
           </span>
@@ -188,7 +188,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.25 }}
-              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden overflow-hidden h-screen"
             >
               <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Navigation</p>
@@ -204,7 +204,7 @@ const Header = () => {
                       {item.label}
                     </a>
                   ) : (
-                    <NavLink key={item.label} to={item.path} end={item.path === '/'} onClick={close} className={({ isActive }) => mobileLink(isActive)}>
+                    <NavLink key={item.label} to={item.path} end={item.path === '/'} className={({ isActive }) => mobileLink(isActive)}>
                       {item.label}
                     </NavLink>
                   )
@@ -212,7 +212,7 @@ const Header = () => {
                 <div className="mt-6 border-t border-gray-200 pt-4">
                   <p className="mb-2 px-4 text-xs font-semibold uppercase tracking-widest text-gray-500">Services</p>
                   {servicesMenu.map((service) => (
-                    <NavLink key={service.title} to={service.path} onClick={close} className={({ isActive }) => `block rounded-lg px-4 py-3 text-sm hover:bg-gray-100 ${isActive ? 'bg-gray-100 font-semibold text-black' : 'text-gray-900'}`}>
+                    <NavLink key={service.title} to={service.path} className={({ isActive }) => `block rounded-lg px-4 py-3 text-sm hover:bg-gray-100 ${isActive ? 'bg-gray-100 font-semibold text-black' : 'text-gray-900'}`}>
                       {service.title}
                     </NavLink>
                   ))}

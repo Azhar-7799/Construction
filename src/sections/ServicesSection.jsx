@@ -55,12 +55,10 @@ const ServicesSection = () => (
         slidesPerView={1}
         loop
         navigation
-        autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+        autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
         breakpoints={{
-          640: { slidesPerView: 1, spaceBetween: 16 },
-          768: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 3, spaceBetween: 24 },
-          1280: { slidesPerView: 4, spaceBetween: 24 }
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          1024: { slidesPerView: 2, spaceBetween: 24 }
         }}
         className="services-swiper pb-2"
       >
