@@ -4,10 +4,10 @@ import Footer from '../components/Footer.jsx';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 
 const DefaultLayout = () => (
-  <div className="relative overflow-hidden bg-crown-dark text-white">
+  <div className="relative min-w-0 overflow-x-hidden bg-crown-dark text-white">
     <Header />
     <ScrollToTop />
-    <main className="relative z-10 pt-14 sm:pt-16">
+    <main className="relative z-10 pt-[3.75rem] sm:pt-16">
       <Outlet />
     </main>
     <Footer />

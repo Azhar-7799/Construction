@@ -16,7 +16,7 @@ const Hero = () => (
     />
     <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-crown-dark/85" />
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(198,156,109,0.16),_transparent_35%),linear-gradient(180deg,rgba(26,21,16,0.56),rgba(10,8,6,0.98))]" />
-    <div className="relative mx-auto flex min-h-screen w-full items-center justify-center px-4 py-12 text-white sm:min-h-[90vh] sm:px-6 md:min-h-[100vh] md:py-16 lg:px-14">
+    <div className="relative mx-auto flex min-h-screen w-full items-center justify-center px-4 py-12 text-white sm:min-h-[90vh] sm:px-6 md:min-h-[100vh] md:py-16 lg:px-8">
       <div className="grid w-full max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-8">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
@@ -50,7 +50,7 @@ const Hero = () => (
             alt="Shaik Azaruddin Founder of Fighters Combat Academy And Crown Home Spaces"
             title="Shaik Azaruddin Founder of Fighters Combat Academy And Crown Home Spaces"
             loading="lazy"
-            className="relative h-[520px] w-full rounded-[32px] object-cover shadow-[0_40px_120px_rgba(0,0,0,0.4)] transition duration-700 hover:scale-[1.01]"
+            className="relative h-[min(520px,65vh)] w-full min-h-[280px] rounded-[32px] object-cover shadow-[0_40px_120px_rgba(0,0,0,0.4)] transition duration-700 hover:scale-[1.01] sm:min-h-[360px] md:min-h-[420px]"
             whileHover={{ scale: 1.02 }}
           />
           <div className="pointer-events-none absolute inset-x-4 bottom-4 rounded-[28px] border border-white/10 bg-gradient-to-r from-black/70 via-black/50 to-transparent p-4 text-white shadow-xl">

@@ -4,7 +4,7 @@ import SEO from '../components/SEO.jsx';
 const Careers = () => (
   <>
     <SEO title="Careers | Crown Home Spaces" description="Join Crown Home Spaces in Kondapur and contribute to construction interior design, construction, and architectural projects across Hyderabad." />
-    <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
+    <section className="relative overflow-x-hidden px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Careers</p>

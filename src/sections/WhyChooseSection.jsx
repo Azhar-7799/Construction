@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const WhyChooseSection = () => (
-  <section className="relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-14 lg:py-20">
+  <section className="relative overflow-x-hidden px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
     <div className="mx-auto grid max-w-7xl gap-8 md:gap-10 lg:gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
       <div>
         <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-crown-gold">Why Crown Home Spaces</p>

@@ -6,7 +6,7 @@ const TestimonialsSection = () => {
   const others = testimonials.filter((t) => t !== featured);
 
   return (
-    <section className="relative overflow-hidden px-6 py-20 sm:px-10 lg:px-14">
+    <section className="relative overflow-x-hidden px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-3xl">
           <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Client feedback</p>

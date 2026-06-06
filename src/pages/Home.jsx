@@ -23,7 +23,7 @@ const Home = () => (
       <ServicesSection />
       <FeaturedProjects />
 
-      <section className="px-4 py-14 sm:px-6 sm:py-16 md:px-10 lg:px-14 lg:py-20">
+      <section className="px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[40px] border border-white/10 bg-black/40 p-6 shadow-glow backdrop-blur-xl sm:p-8 lg:p-10">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.1fr] lg:items-center">
             <div className="space-y-6">
@@ -37,7 +37,7 @@ const Home = () => (
             </div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.1 }} className="relative mx-auto w-full overflow-hidden rounded-[36px] border border-crown-gold/20 bg-white/5 p-4 shadow-[0_40px_120px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,215,0,0.16),_transparent_40%)]" />
-              <img src={founderImage} alt="Shaik Azaruddin Crown Home Spaces Founder" title="Shaik Azaruddin | Founder of Crown Home Spaces" loading="lazy" className="relative h-[420px] w-full rounded-[28px] object-cover shadow-[0_35px_80px_rgba(0,0,0,0.4)] transition duration-700 hover:scale-[1.01]" />
+              <img src={founderImage} alt="Shaik Azaruddin Crown Home Spaces Founder" title="Shaik Azaruddin | Founder of Crown Home Spaces" loading="lazy" className="relative h-[min(420px,55vh)] w-full min-h-[240px] rounded-[28px] object-cover shadow-[0_35px_80px_rgba(0,0,0,0.4)] transition duration-700 hover:scale-[1.01] sm:min-h-[320px]" />
               <div className="absolute inset-x-4 bottom-4 rounded-[28px] border border-white/10 bg-black/70 p-5 text-white backdrop-blur-md">
                 <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Founder Portrait</p>
                 <p className="mt-2 text-xl font-semibold">Shaik Azaruddin</p>
@@ -55,7 +55,7 @@ const Home = () => (
 
       <WhyChooseSection />
 
-      <section className="px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-14 lg:py-20">
+      <section className="px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl sm:rounded-[32px] border border-white/10 bg-white/5 p-5 sm:p-6 md:p-8 shadow-glow">
             <h3 className="text-xs sm:text-sm uppercase tracking-[0.35em] text-crown-gold">Meet Our Lead Engineer</h3>

@@ -21,7 +21,7 @@ const navItems = [
 ];
 
 const desktopLink = (active) =>
-  `inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-md px-2 text-[10px] font-medium uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crown-gold lg:px-2.5 lg:text-[11px] lg:tracking-[0.1em] xl:px-3 xl:text-xs ${
+  `inline-flex h-10 shrink-0 items-center whitespace-nowrap rounded-md px-2 text-[10px] font-medium uppercase tracking-[0.08em] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-crown-gold xl:px-2.5 xl:text-[11px] 2xl:px-3 2xl:text-xs ${
     active ? 'text-crown-gold' : 'text-crown-beige hover:text-white'
   }`;
 
@@ -73,8 +73,8 @@ const Header = () => {
     if (full || !item.short) return item.label;
     return (
       <>
-        <span className="min-[1536px]:hidden">{item.short}</span>
-        <span className="hidden min-[1536px]:inline">{item.label}</span>
+        <span className="2xl:hidden">{item.short}</span>
+        <span className="hidden 2xl:inline">{item.label}</span>
       </>
     );
   };
@@ -82,21 +82,25 @@ const Header = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-300 ${
-        sticky || open ? 'border-b border-white/10 bg-crown-dark/95 shadow-lg backdrop-blur-md' : 'bg-crown-dark/90 backdrop-blur-sm lg:bg-transparent lg:backdrop-blur-none'
+        sticky || open ? 'border-b border-white/10 bg-crown-dark/95 shadow-lg backdrop-blur-md' : 'bg-crown-dark/90 backdrop-blur-sm xl:bg-transparent xl:backdrop-blur-none'
       }`}
     >
-      <div className="mx-auto flex h-14 max-w-7xl items-center gap-2 px-4 sm:h-16 sm:gap-3 sm:px-6 lg:px-8">
-        <Link to="/" onClick={close} className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[11px] font-bold text-crown-gold sm:h-10 sm:w-10">
+      <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-2 px-4 py-1 sm:min-h-16 sm:gap-3 sm:px-6 xl:grid xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:items-center xl:gap-4 xl:px-8 xl:py-0">
+        <Link to="/" onClick={close} className="flex min-w-fit shrink-0 items-center gap-2 sm:gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[11px] font-bold text-crown-gold sm:h-10 sm:w-10">
             CH
           </span>
-          <span className="hidden max-w-[8rem] sm:block lg:max-w-[6rem] min-[1536px]:max-w-[9rem]">
-            <span className="block truncate text-[9px] font-medium uppercase tracking-[0.18em] text-crown-beige xl:text-[10px]">Crown Home Spaces</span>
-            <span className="block truncate text-[9px] text-crown-gold xl:text-[10px]">Construction & Interior</span>
+          <span className="min-w-fit shrink-0">
+            <span className="block whitespace-nowrap text-sm font-bold tracking-wide text-crown-beige sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+              Crown Home Spaces
+            </span>
+            <span className="block whitespace-nowrap text-[10px] font-medium tracking-wide text-crown-gold sm:text-xs md:text-sm">
+              Construction & Interior
+            </span>
           </span>
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 overflow-hidden lg:flex" aria-label="Main navigation">
+        <nav className="hidden min-w-0 items-center justify-center gap-0.5 xl:flex" aria-label="Main navigation">
           {navItems.map((item) =>
             item.external ? (
               <a key={item.path} href={item.path} target="_blank" rel="noreferrer" title={item.label} className={desktopLink(false)}>
@@ -117,17 +121,17 @@ const Header = () => {
           )}
         </nav>
 
-        <div className="ml-auto flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center justify-end gap-2">
           <a
             href="https://wa.me/919553041347"
             target="_blank"
             rel="noreferrer"
-            className="hidden h-10 items-center gap-1.5 rounded-full border border-crown-gold/40 bg-crown-gold/10 px-3 text-xs text-crown-gold hover:bg-crown-gold/20 lg:inline-flex xl:px-4"
+            className="hidden h-10 items-center gap-1.5 rounded-full border border-crown-gold/40 bg-crown-gold/10 px-3 text-xs text-crown-gold hover:bg-crown-gold/20 xl:inline-flex 2xl:px-4"
           >
             <FaWhatsapp size={15} aria-hidden="true" />
-            <span className="hidden xl:inline">WhatsApp</span>
+            <span className="hidden 2xl:inline">WhatsApp</span>
           </a>
-          <Link to="/contact" className="hidden h-10 items-center rounded-full bg-crown-gold px-4 text-xs font-semibold text-crown-dark hover:bg-white lg:inline-flex">
+          <Link to="/contact" className="hidden h-10 items-center rounded-full bg-crown-gold px-4 text-xs font-semibold text-crown-dark hover:bg-white xl:inline-flex">
             Get Quote
           </Link>
           <button
@@ -136,7 +140,7 @@ const Header = () => {
             aria-expanded={open}
             aria-controls="mobile-navigation"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold lg:hidden"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold xl:hidden"
           >
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
@@ -151,7 +155,7 @@ const Header = () => {
             exit={{ opacity: 0, y: -8 }}
             onMouseEnter={() => setShowMega(true)}
             onMouseLeave={() => setShowMega(false)}
-            className="absolute left-1/2 top-full z-40 hidden w-[min(96vw,72rem)] -translate-x-1/2 border border-white/10 bg-crown-dark/98 px-4 py-6 shadow-2xl backdrop-blur-md lg:block"
+            className="absolute left-1/2 top-full z-40 hidden w-[min(96vw,72rem)] -translate-x-1/2 border border-white/10 bg-crown-dark/98 px-4 py-6 shadow-2xl backdrop-blur-md xl:block"
           >
             <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
               {servicesMenu.map((service) => (
@@ -175,7 +179,7 @@ const Header = () => {
               exit={{ opacity: 0 }}
               aria-label="Close menu"
               onClick={close}
-              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm xl:hidden"
             />
             <motion.aside
               id="mobile-navigation"
@@ -186,7 +190,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.25 }}
-              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden"
+              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl xl:hidden"
             >
               <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Navigation</p>

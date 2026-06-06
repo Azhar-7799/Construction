@@ -37,7 +37,7 @@ const ServiceCard = ({ service }) => (
 );
 
 const ServicesSection = () => (
-  <section className="relative overflow-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-24">
+  <section className="relative overflow-x-hidden px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-24">
     <div className="mx-auto max-w-7xl">
       <div className="mb-8 max-w-3xl sm:mb-12">
         <p className="text-xs uppercase tracking-[0.35em] text-crown-gold sm:text-sm">Our expertise</p>

@@ -7,7 +7,7 @@ import { founderImage } from '../assets/images/founder/index.js';
 const About = () => (
   <>
     <SEO title="About Us | Crown Home Spaces" description="Meet Crown Home Spaces, the Kondapur-based leader in construction interiors and turnkey project delivery across Hyderabad and Telangana." />
-    <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
+    <section className="relative overflow-x-hidden px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>

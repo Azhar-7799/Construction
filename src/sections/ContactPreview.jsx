@@ -3,7 +3,7 @@ import { FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaEnvelope } from 'react-icons
 import { googleMapsUrl, businessStreetAddress } from '../constants/location.js';
 
 const ContactPreview = () => (
-  <section className="relative overflow-hidden border-t border-white/10 px-6 py-20 sm:px-10 lg:px-14">
+  <section className="relative overflow-x-hidden border-t border-white/10 px-4 py-20 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-7xl rounded-[40px] bg-gradient-to-r from-[#1b1611]/90 via-[#2b2218]/90 to-[#1c1612]/90 p-10 shadow-glow sm:p-14">
       <div className="grid gap-10 lg:grid-cols-[1.7fr_1fr] lg:items-center">
         <div>

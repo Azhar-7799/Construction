@@ -26,7 +26,7 @@ const Projects = () => {
   return (
     <>
     <SEO title="Projects | Crown Home Spaces" description="Explore our luxury construction and interior design project portfolio across Hyderabad." />
-    <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
+    <section className="relative overflow-x-hidden px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Project portfolio</p>
@@ -39,7 +39,7 @@ const Projects = () => {
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <motion.article key={project.title} whileHover={{ y: -6 }} className="group block overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-glow transition hover:border-crown-gold/20 hover:bg-white/10">
-              <div className="relative h-96 overflow-hidden">
+              <div className="relative h-56 overflow-hidden sm:h-72 md:h-80 lg:h-96">
                 <button type="button" onClick={() => setSelected(project.image)} className="absolute inset-0 focus:outline-none">
                   <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 </button>
