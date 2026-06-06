@@ -62,7 +62,7 @@ const ServicesSection = () => (
           1024: { slidesPerView: 3, spaceBetween: 24 },
           1280: { slidesPerView: 4, spaceBetween: 24 }
         }}
-        className="services-swiper !overflow-visible pb-2"
+        className="services-swiper pb-2"
       >
         {servicesList.map((service) => (
           <SwiperSlide key={service.slug} className="!h-auto">

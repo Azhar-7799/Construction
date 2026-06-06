@@ -15,7 +15,7 @@ const Testimonials = () => (
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 xl:grid-cols-3">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item) => (
             <motion.article key={item.name} whileHover={{ y: -6 }} className="rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-glow transition hover:border-crown-gold/30 hover:bg-white/10">
               <p className="leading-8 text-crown-beige/90">“{item.quote}”</p>

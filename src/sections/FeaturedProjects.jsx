@@ -23,7 +23,7 @@ const FeaturedProjects = () => (
         spaceBetween={16}
         slidesPerView={1}
         navigation
-        autoplay={{ delay: 4500, disableOnInteraction: false }}
+        autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
         breakpoints={{ 640: { slidesPerView: 1, spaceBetween: 20 }, 1024: { slidesPerView: 2, spaceBetween: 24 } }}
       >
         {projects.map((project) => (

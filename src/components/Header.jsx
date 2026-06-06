@@ -109,17 +109,20 @@ const Header = () => {
             ) : (
               <div
                 key={item.path}
-                className="shrink-0 relative group"
+                className="shrink-0 relative"
+                onMouseEnter={() => item.path === '/services' && setShowMega(true)}
+                onMouseLeave={() => item.path === '/services' && setShowMega(false)}
               >
-                <Link to={item.path} end={item.path === '/'} className={({ isActive }) => desktopLink(isActive)}>
+                <NavLink to={item.path} end={item.path === '/'} className={({ isActive }) => desktopLink(isActive)}>
                   {navLabel(item)}
-                </Link>
-                {item.path === '/services' && (
+                </NavLink>
+                {item.path === '/services' && showMega && (
                   <div
-                    className="absolute left-1/2 top-full -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                    className="absolute left-1/2 top-full -translate-x-1/2 pt-2 z-50"
                     onMouseEnter={() => setShowMega(true)}
                     onMouseLeave={() => setShowMega(false)}
                   >
+                    <div className="absolute -top-2 left-0 right-0 h-2" />
                     <div className="w-[min(96vw,72rem)] border border-white/10 bg-crown-dark/98 px-4 py-6 shadow-2xl backdrop-blur-md">
                       <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
                         {servicesMenu.map((service) => (
@@ -209,9 +212,9 @@ const Header = () => {
                 <div className="mt-6 border-t border-gray-200 pt-4">
                   <p className="mb-2 px-4 text-xs font-semibold uppercase tracking-widest text-gray-500">Services</p>
                   {servicesMenu.map((service) => (
-                    <Link key={service.title} to={service.path} onClick={close} className="block rounded-lg px-4 py-3 text-sm text-gray-900 hover:bg-gray-100">
+                    <NavLink key={service.title} to={service.path} onClick={close} className={({ isActive }) => `block rounded-lg px-4 py-3 text-sm hover:bg-gray-100 ${isActive ? 'bg-gray-100 font-semibold text-black' : 'text-gray-900'}`}>
                       {service.title}
-                    </Link>
+                    </NavLink>
                   ))}
                 </div>
               </nav>
