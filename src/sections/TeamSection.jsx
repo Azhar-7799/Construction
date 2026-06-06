@@ -9,7 +9,7 @@ const TeamSection = ({ featuredOnly = false }) => {
   const others = team.filter((m) => m !== lead);
 
   return (
-    <section className="relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-14 lg:py-20">
+    <section className="relative overflow-x-hidden px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 flex flex-col gap-2 sm:mb-10">
           <div>

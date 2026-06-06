@@ -53,7 +53,7 @@ const LiveProjects = () => {
         <img src={bannerImage} alt="Premium architectural hero banner" className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,215,0,0.14),_transparent_40%)]" />
-        <div className="relative mx-auto flex h-full max-w-7xl items-end px-6 pb-16 sm:px-10 lg:px-14">
+        <div className="relative mx-auto flex h-full max-w-7xl items-end px-4 pb-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-glow backdrop-blur-xl">
             <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Live Projects Showcase</p>
             <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">Cinematic luxury architecture, interiors, and turnkey construction.</h1>
@@ -62,7 +62,7 @@ const LiveProjects = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(198,156,109,0.14),_transparent_35%),radial-gradient(circle_at_bottom,_rgba(255,255,255,0.03),_transparent_40%),#14100d] px-6 py-20 sm:px-10 lg:px-14">
+      <section className="relative overflow-x-hidden bg-[radial-gradient(circle_at_top,_rgba(198,156,109,0.14),_transparent_35%),radial-gradient(circle_at_bottom,_rgba(255,255,255,0.03),_transparent_40%),#14100d] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
@@ -89,7 +89,7 @@ const LiveProjects = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-14">
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
           <div>
             <div className="mb-8 flex items-center gap-4 rounded-full border border-crown-gold/30 bg-black/40 px-5 py-3 text-sm uppercase tracking-[0.35em] text-crown-gold shadow-glow">

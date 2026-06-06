@@ -28,7 +28,7 @@ const serviceLinks = [
 ];
 
 const Footer = () => (
-  <footer className="border-t border-white/10 bg-crown-dark/95 px-4 py-10 text-crown-beige sm:px-6 sm:py-14 md:px-10 lg:px-14 lg:py-16">
+  <footer className="border-t border-white/10 bg-crown-dark/95 px-4 py-10 text-crown-beige sm:px-6 sm:py-14 lg:px-8 lg:py-16">
     <div className="mx-auto grid max-w-7xl gap-6 grid-cols-1 sm:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-8">
       <div>
         <div className="flex items-center gap-2 sm:gap-3">

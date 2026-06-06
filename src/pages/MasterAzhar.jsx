@@ -12,7 +12,7 @@ import image2 from "../assets/images/founder/image2.png";
 const Hero = ({ image }) => (
   <section className="relative flex min-h-screen items-center bg-gradient-to-b from-black/60 to-black/40">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-crown-dark/60 via-transparent to-transparent" />
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:flex-row lg:items-center lg:gap-12">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:flex-row lg:items-center lg:gap-12 lg:px-8">
       <div className="max-w-2xl">
         <motion.h1 initial={{ y: 24, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.1 }} className="hero-animate text-4xl font-semibold leading-tight text-crown-gold sm:text-5xl">
           Shaik Azaruddin — Founder of Crown Home Spaces
@@ -66,7 +66,7 @@ const Gallery = ({ images }) => {
 
   if (!images || images.length === 0) return null;
   return (
-    <section className="section-animate mx-auto max-w-7xl px-6 py-20">
+    <section className="section-animate mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <h3 className="text-xl font-semibold text-crown-gold">Gallery</h3>
       <div className="mt-6 columns-2 gap-4 sm:columns-3 lg:columns-4">
         {images.map((src, i) => (
@@ -250,7 +250,7 @@ const MasterAzhar = () => {
 
       <Hero image={founderImage} />
 
-      <section className="section-animate mx-auto max-w-7xl px-6 py-20" id="founder-story">
+      <section className="section-animate mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8" id="founder-story">
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             <h3 className="text-2xl font-semibold text-crown-gold">About Shaik Azaruddin</h3>
@@ -278,7 +278,7 @@ const MasterAzhar = () => {
         </div>
       </section>
 
-      <section className="section-animate mx-auto max-w-7xl px-6 py-12">
+      <section className="section-animate mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <h3 className="text-2xl font-semibold text-crown-gold">Fighters Combat Academy</h3>
         <div className="mt-6 flex flex-col gap-6 sm:flex-row">
           <div className="flex-1 rounded-3xl border border-white/5 bg-gradient-to-br from-black/30 to-white/5 p-6 backdrop-blur-md">
@@ -295,7 +295,7 @@ const MasterAzhar = () => {
 
       <Gallery images={finalImages} />
 
-      <section className="section-animate mx-auto max-w-7xl px-6 py-16">
+      <section className="section-animate mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <h3 className="text-2xl font-semibold text-crown-gold">Connect</h3>
         <div className="mt-6 flex flex-wrap gap-4">
           <a href="https://instagram.com/crownhomespaces" target="_blank" rel="noreferrer" className="rounded-xl border border-white/5 bg-white/5 px-5 py-4 text-crown-beige"> <FaInstagram /> Instagram</a>
@@ -304,7 +304,7 @@ const MasterAzhar = () => {
         </div>
       </section>
 
-      <section className="section-animate mx-auto max-w-7xl px-6 py-20">
+      <section className="section-animate mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-white/5 bg-gradient-to-r from-black/40 to-black/20 p-10 text-center">
           <h4 className="text-2xl font-semibold text-white">Work with Master Azhar</h4>
           <p className="mt-4 text-crown-beige">Book a consultation for construction interiors, construction leadership, or martial arts mentorship.</p>

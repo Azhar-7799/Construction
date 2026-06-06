@@ -6,17 +6,17 @@ export const serviceHeroImages = {
   'residential-construction':
     'https://rsbuilder.in/wp-content/uploads/2025/04/house-under-construction-1.webp',
   'turnkey-projects':
-    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=90',
+    'https://thearchitectsdiary.com/wp-content/uploads/2018/11/1.jpg',
   'architectural-elevations':
-    'https://www.hybonelevators.com/images/the-7-zero.webp',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8twtQLDBscdCP_f5vqN-18bzWKPchbOB9GQ&s',
   'commercial-construction':
-    'https://wallsanddreams.com/wp-content/uploads/2025/05/Commercial-Building-in-India.jpg',
+    'https://www.nhcsllc.net/wp-content/uploads/2019/12/4L6A3010.jpg',
   'hospitality-projects':
     'https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=90',
   'commercial-interior':
-    'https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1600&q=90',
+    'https://talatiandpartners.com/wp-content/uploads/2023/08/5-game-changing-commercial-interior-design-ideas1.webp',
   'construction-management':
-    'https://www.uniccm.com/uploads/blogs/commercial_manager.webp'
+    'https://visibuild.com/wp-content/uploads/2025/10/Construction-Site-Manager.jpg'
 };
 
 export const servicePages = [

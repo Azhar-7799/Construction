@@ -29,7 +29,7 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="px-6 py-20">
+      <div className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <h1 className="text-3xl font-semibold text-white">Project not found</h1>
           <p className="mt-4 text-crown-beige/90">The project you requested does not exist.</p>
@@ -60,7 +60,7 @@ const ProjectDetail = () => {
   return (
     <>
       <SEO title={`${project.title} | Crown Home Spaces`} description={project.description} image={project.image} />
-      <section className="px-6 py-20">
+      <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Project</p>

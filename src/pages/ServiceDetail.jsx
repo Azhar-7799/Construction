@@ -51,7 +51,7 @@ const ServiceDetail = () => {
         }}
       />
 
-      <section className="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <section className="relative overflow-x-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="pointer-events-none absolute inset-0 z-0">
           <img src={heroSrc} alt="" aria-hidden="true" className="h-full w-full object-cover" loading="eager" decoding="async" onError={onImgError} />
         </div>

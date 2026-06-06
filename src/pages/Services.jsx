@@ -9,7 +9,7 @@ const Services = () => (
       title="Services | Crown Home Spaces"
       description="Explore construction interiors, turnkey projects, architectural elevations, commercial construction and premium hospitality projects in Hyderabad."
     />
-    <section className="relative overflow-hidden px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-14 lg:py-24">
+    <section className="relative overflow-x-hidden px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-crown-gold">Service experience</p>

@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <>
       <SEO title="Contact | Crown Home Spaces" description={`Contact Crown Home Spaces at ${businessStreetAddress} for construction interiors, turnkey projects, and elite architectural services in Hyderabad.`} />
-      <section className="relative overflow-hidden px-6 py-24 sm:px-10 lg:px-14">
+      <section className="relative overflow-x-hidden px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Contact</p>

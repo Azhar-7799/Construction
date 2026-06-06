@@ -9,7 +9,7 @@ const Blog = () => (
       canonical="https://crownhomespaces.com/blog"
       keywords="Construction Blog Hyderabad, Interior Trends Hyderabad, Project Delivery Insights Hyderabad, Turnkey Project Blog Hyderabad"
     />
-    <section className="relative overflow-hidden bg-crown-dark px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+    <section className="relative overflow-x-hidden bg-crown-dark px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-6xl rounded-[40px] border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur-xl sm:p-12">
         <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Blog & insights</p>
         <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">Future-proof your next construction and interior project.</h1>
