@@ -82,10 +82,10 @@ const Header = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-300 ${
-        sticky || open ? 'border-b border-white/10 bg-crown-dark/95 shadow-lg backdrop-blur-md' : 'bg-crown-dark/90 backdrop-blur-sm xl:bg-transparent xl:backdrop-blur-none'
+        sticky || open ? 'border-b border-white/10 bg-crown-dark/95 shadow-lg backdrop-blur-md' : 'bg-crown-dark/90 backdrop-blur-sm'
       }`}
     >
-      <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-2 px-4 py-1 sm:min-h-16 sm:gap-3 sm:px-6 xl:grid xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:items-center xl:gap-4 xl:px-8 xl:py-0">
+      <div className="mx-auto flex min-h-14 max-w-7xl items-center justify-between gap-2 px-4 py-1 sm:min-h-16 sm:gap-3 sm:px-6 lg:gap-4 lg:px-8">
         <Link to="/" onClick={close} className="flex min-w-fit shrink-0 items-center gap-2 sm:gap-3">
           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-crown-gold bg-crown-rich text-[11px] font-bold text-crown-gold sm:h-10 sm:w-10">
             CH
@@ -100,7 +100,7 @@ const Header = () => {
           </span>
         </Link>
 
-        <nav className="hidden min-w-0 items-center justify-center gap-0.5 xl:flex" aria-label="Main navigation">
+        <nav className="hidden min-w-fit items-center justify-center gap-0.5 lg:flex flex-1" aria-label="Main navigation">
           {navItems.map((item) =>
             item.external ? (
               <a key={item.path} href={item.path} target="_blank" rel="noreferrer" title={item.label} className={desktopLink(false)}>
@@ -109,13 +109,29 @@ const Header = () => {
             ) : (
               <div
                 key={item.path}
-                className="shrink-0"
-                onMouseEnter={() => item.path === '/services' && setShowMega(true)}
-                onMouseLeave={() => item.path === '/services' && setShowMega(false)}
+                className="shrink-0 relative group"
               >
-                <NavLink to={item.path} end={item.path === '/'} className={({ isActive }) => desktopLink(isActive)}>
+                <Link to={item.path} end={item.path === '/'} className={({ isActive }) => desktopLink(isActive)}>
                   {navLabel(item)}
-                </NavLink>
+                </Link>
+                {item.path === '/services' && (
+                  <div
+                    className="absolute left-1/2 top-full -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"
+                    onMouseEnter={() => setShowMega(true)}
+                    onMouseLeave={() => setShowMega(false)}
+                  >
+                    <div className="w-[min(96vw,72rem)] border border-white/10 bg-crown-dark/98 px-4 py-6 shadow-2xl backdrop-blur-md">
+                      <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+                        {servicesMenu.map((service) => (
+                          <Link key={service.title} to={service.path} className="rounded-xl border border-white/10 bg-white/5 p-3 hover:border-crown-gold/40 hover:bg-white/10">
+                            <p className="text-xs font-semibold text-white">{service.title}</p>
+                            <p className="mt-1 line-clamp-2 text-[10px] text-crown-beige/80">{service.description}</p>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             )
           )}
@@ -126,12 +142,12 @@ const Header = () => {
             href="https://wa.me/919553041347"
             target="_blank"
             rel="noreferrer"
-            className="hidden h-10 items-center gap-1.5 rounded-full border border-crown-gold/40 bg-crown-gold/10 px-3 text-xs text-crown-gold hover:bg-crown-gold/20 xl:inline-flex 2xl:px-4"
+            className="hidden h-10 items-center gap-1.5 rounded-full border border-crown-gold/40 bg-crown-gold/10 px-3 text-xs text-crown-gold hover:bg-crown-gold/20 lg:inline-flex 2xl:px-4"
           >
             <FaWhatsapp size={15} aria-hidden="true" />
             <span className="hidden 2xl:inline">WhatsApp</span>
           </a>
-          <Link to="/contact" className="hidden h-10 items-center rounded-full bg-crown-gold px-4 text-xs font-semibold text-crown-dark hover:bg-white xl:inline-flex">
+          <Link to="/contact" className="hidden h-10 items-center rounded-full bg-crown-gold px-4 text-xs font-semibold text-crown-dark hover:bg-white lg:inline-flex">
             Get Quote
           </Link>
           <button
@@ -140,34 +156,13 @@ const Header = () => {
             aria-expanded={open}
             aria-controls="mobile-navigation"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold xl:hidden"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold lg:hidden"
           >
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
         </div>
       </div>
 
-      <AnimatePresence>
-        {showMega && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            onMouseEnter={() => setShowMega(true)}
-            onMouseLeave={() => setShowMega(false)}
-            className="absolute left-1/2 top-full z-40 hidden w-[min(96vw,72rem)] -translate-x-1/2 border border-white/10 bg-crown-dark/98 px-4 py-6 shadow-2xl backdrop-blur-md xl:block"
-          >
-            <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-              {servicesMenu.map((service) => (
-                <Link key={service.title} to={service.path} className="rounded-xl border border-white/10 bg-white/5 p-3 hover:border-crown-gold/40 hover:bg-white/10">
-                  <p className="text-xs font-semibold text-white">{service.title}</p>
-                  <p className="mt-1 line-clamp-2 text-[10px] text-crown-beige/80">{service.description}</p>
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <AnimatePresence>
         {open && (
@@ -179,7 +174,7 @@ const Header = () => {
               exit={{ opacity: 0 }}
               aria-label="Close menu"
               onClick={close}
-              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm xl:hidden"
+              className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm lg:hidden"
             />
             <motion.aside
               id="mobile-navigation"
@@ -190,7 +185,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.25 }}
-              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl xl:hidden"
+              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden"
             >
               <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Navigation</p>
