@@ -254,19 +254,19 @@ const MasterAzhar = () => {
         <div className="space-y-8">
           <h3 className="text-3xl font-semibold text-crown-gold md:text-4xl lg:text-5xl">Founder's Journey</h3>
           
-          <h4 className="text-xl font-semibold text-white md:text-2xl">Mr. SHAIK AZHARUDDIN – Founder & Director</h4>
+          <h4 className="text-xl font-semibold text-white md:text-2xl">Mr. SHAIK AZARUDDIN – Founder & Director</h4>
           
           <div className="space-y-6 text-base text-crown-beige md:text-lg leading-relaxed">
             <p>
-              Mr. Shaik Azharuddin graduated in Civil Engineering in the year 2013. Throughout his professional journey, he has been passionate about delivering every project with excellence, ensuring that client requirements are met with quality, innovation, and commitment. His vision is to contribute to modern architecture and infrastructure development by creating solutions that are practical, sustainable, and well-suited to the needs of the Indian community.
+              Mr. Shaik Azaruddin graduated in Civil Engineering in the year 2013. Throughout his professional journey, he has been passionate about delivering every project with excellence, ensuring that client requirements are met with quality, innovation, and commitment. His vision is to contribute to modern architecture and infrastructure development by creating solutions that are practical, sustainable, and well-suited to the needs of the Indian community.
             </p>
             
             <p>
-              Alongside his engineering career, Mr. Shaik Azharuddin is a <strong className="text-white">5TH DAN BLACK BELT HOLDER IN THE BUDOKAN STYLE OF KARATE</strong>. He began his martial arts journey at the age of seven and has dedicated over two decades to mastering, practicing, and promoting the discipline. Since 2017, he has been actively coaching and mentoring aspiring martial artists.
+              Alongside his engineering career, Mr. Shaik Azaruddin is a <strong className="text-white">5TH DAN BLACK BELT HOLDER IN THE BUDOKAN STYLE OF KARATE</strong>. He began his martial arts journey at the age of seven and has dedicated over two decades to mastering, practicing, and promoting the discipline. Since 2017, he has been actively coaching and mentoring aspiring martial artists.
             </p>
             
             <p>
-              Currently, he holds the prestigious <strong className="text-white">GODAN (5TH DAN) RANK</strong> in the Karate Budokan Federation of India (KBFI) and has successfully trained more than <strong className="text-white">1,000 students</strong> throughout his career. His dedication to martial arts has enabled him to inspire, guide, and develop numerous athletes, helping them achieve excellence at regional, national, and international levels.
+              Currently, he holds the prestigious <strong className="text-white">GODAN (5TH DAN) RANK</strong> in the <strong className='text-white'> KARATE BUDOKAN FEDERATION INTERNATIONAL (KBFI) </strong> and has successfully trained more than <strong className="text-white">1,000 students</strong> throughout his career. His dedication to martial arts has enabled him to inspire, guide, and develop numerous athletes, helping them achieve excellence at regional, national, and international levels.
             </p>
             
             <p>
@@ -293,7 +293,7 @@ const MasterAzhar = () => {
         <div className="mt-6 flex flex-col gap-6 sm:flex-row">
           <div className="flex-1 rounded-3xl border border-white/5 bg-gradient-to-br from-black/30 to-white/5 p-6 backdrop-blur-md">
             <h4 className="text-lg font-semibold">Elite combat training</h4>
-            <p className="mt-3 text-crown-beige">The leadership brand behind Crown Home Spaces, Fighters Combat Academy fuses premium discipline with championship-level coaching in Hyderabad.</p>
+            <p className="mt-3 text-crown-beige">The academy focuses on rigorous, multi-disciplinary preparation designed for military special forces, law enforcement tactical teams, and advanced martial artists. It goes beyond basic self-defense by prioritizing physical conditioning, high-pressure decision-making, and specialized tactical survival skills.</p>
             <a href="https://fighter-combat.vercel.app/" target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-crown-gold px-5 py-3 text-sm font-semibold text-crown-dark">Visit Fighters Combat Academy</a>
           </div>
 

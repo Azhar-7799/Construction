@@ -26,7 +26,7 @@ const Hero = () => (
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.1 }} className="text-[clamp(2.5rem,5vw,4.5rem)] font-semibold leading-tight text-white">
             Crown Home Spaces
-            <span className="block text-[clamp(1.75rem,3vw,3rem)] text-crown-gold">Construction and Interior. Strategic construction. Signature architecture.</span>
+            <span className="block text-[clamp(1.75rem,3vw,3rem)] text-crown-gold">STRATEGIC CONSTRUCTION. Signature Interior & Architecture</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="max-w-2xl text-[clamp(0.95rem,1.2vw,1.125rem)] leading-8 text-crown-beige">
             We craft cinematic residences, corporate landmarks, and premium interior ecosystems with timeless sophistication and disciplined execution.
