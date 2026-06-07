@@ -251,29 +251,39 @@ const MasterAzhar = () => {
       <Hero image={founderImage} />
 
       <section className="section-animate mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8" id="founder-story">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div>
-            <h3 className="text-2xl font-semibold text-crown-gold">About Shaik Azaruddin</h3>
-            <p className="mt-6 text-crown-beige leading-relaxed">Shaik Azaruddin leads Crown Home Spaces as the founder and construction interiors specialist. His leadership blends cinematic aesthetics, turnkey delivery, and enterprise-grade project execution for Hyderabad’s most discerning clients.</p>
-            <p className="mt-4 text-crown-beige leading-relaxed">He also operates Fighters Combat Academy under the identity of Master Azhar, pairing disciplined martial arts mastery with premium brand storytelling.</p>
-          </div>
-
-          <div className="flex flex-col gap-6">
-            <div className="rounded-2xl border border-white/5 bg-white/5 p-6">
-              <h4 className="text-sm font-semibold text-crown-beige uppercase">Leadership & Achievements</h4>
-              <ul className="mt-4 space-y-2 text-crown-beige">
-                <li>Delivered 100+ construction projects across Telangana</li>
-                <li>Recognized for cinematic interior storytelling</li>
-                <li>Founder & mentor at Fighters Combat Academy</li>
-              </ul>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <AnimatedCounter value={30} suffix="+" label="Interior Projects Delivered" className="rounded-xl bg-white/3 p-6 text-center" />
-              <AnimatedCounter value={11} suffix="+" label="Years Experience" className="rounded-xl bg-white/3 p-6 text-center" />
-              <AnimatedCounter value={30} suffix="+" label="Telangana Areas Served" className="rounded-xl bg-white/3 p-6 text-center" />
-              <AnimatedCounter value={48} suffix="+" label="Leadership Team" className="rounded-xl bg-white/3 p-6 text-center" />
-            </div>
+        <div className="space-y-8">
+          <h3 className="text-3xl font-semibold text-crown-gold md:text-4xl lg:text-5xl">Founder's Journey</h3>
+          
+          <h4 className="text-xl font-semibold text-white md:text-2xl">Mr. SHAIK AZHARUDDIN – Founder & Director</h4>
+          
+          <div className="space-y-6 text-base text-crown-beige md:text-lg leading-relaxed">
+            <p>
+              Mr. Shaik Azharuddin graduated in Civil Engineering in the year 2013. Throughout his professional journey, he has been passionate about delivering every project with excellence, ensuring that client requirements are met with quality, innovation, and commitment. His vision is to contribute to modern architecture and infrastructure development by creating solutions that are practical, sustainable, and well-suited to the needs of the Indian community.
+            </p>
+            
+            <p>
+              Alongside his engineering career, Mr. Shaik Azharuddin is a <strong className="text-white">5TH DAN BLACK BELT HOLDER IN THE BUDOKAN STYLE OF KARATE</strong>. He began his martial arts journey at the age of seven and has dedicated over two decades to mastering, practicing, and promoting the discipline. Since 2017, he has been actively coaching and mentoring aspiring martial artists.
+            </p>
+            
+            <p>
+              Currently, he holds the prestigious <strong className="text-white">GODAN (5TH DAN) RANK</strong> in the Karate Budokan Federation of India (KBFI) and has successfully trained more than <strong className="text-white">1,000 students</strong> throughout his career. His dedication to martial arts has enabled him to inspire, guide, and develop numerous athletes, helping them achieve excellence at regional, national, and international levels.
+            </p>
+            
+            <p>
+              Driven by his commitment to empowering young talent, Master Azhar established <strong className="text-white">FIGHTERS COMBAT ACADEMY</strong> with a mission to provide aspiring athletes and martial artists with a professional platform to develop their skills and achieve excellence. The academy aims to nurture future champions and help them represent India at national and international martial arts events.
+            </p>
+            
+            <p>
+              Beyond competitive success, the academy also focuses on creating career opportunities for individuals aspiring to build a future in the martial arts industry through coaching, training, mentorship, and professional development. The academy serves as a platform for talented athletes to showcase their abilities, pursue their passion, and build successful careers in the field of martial arts.
+            </p>
+            
+            <p>
+              Master Azhar currently serves as a Partner and Zonal Chief Instructor of <a href="https://www.instagram.com/reel/DYlIiUYvRPz/" target="_blank" rel="noreferrer" className="text-crown-gold hover:text-white underline">KBFI Headquarters</a>, working closely alongside Hanshi Master B. Parmesh, the International Style Chief Instructor and Proprietor of KBFI. Together, they are dedicated to promoting martial arts education, discipline, and excellence across the region while nurturing the next generation of martial artists and champions.
+            </p>
+            
+            <p>
+              Through his leadership, dedication, and vision, Master Azhar continues to inspire young athletes, contribute to the growth of martial arts in India, and create opportunities for aspiring martial artists to achieve success on both national and international platforms.
+            </p>
           </div>
         </div>
       </section>
