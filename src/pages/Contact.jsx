@@ -25,7 +25,7 @@ const Contact = () => {
         <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Contact</p>
-            <h1 className="mt-4 text-5xl font-semibold text-white sm:text-6xl">Connect with our Telangana team for your next premium project.</h1>
+            <h1 className="mt-4 text-5xl font-semibold text-white sm:text-6xl">Connect with our team for your next premium project.</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-crown-beige/90">
               Reach out by WhatsApp, email, phone, or the contact form. We respond swiftly and provide detailed guidance for construction interiors, construction, and architectural services.
             </p>
