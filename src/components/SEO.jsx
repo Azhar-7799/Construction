@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { businessStreetAddress, businessLocality, businessRegion, businessCountry, googleMapsUrl } from '../constants/location.js';
 
 const defaultMeta = {
-  title: 'Crown Home Spaces | Construction & Interior Services in Kondapur',
+  title: 'Crown Home Spaces | Construction & Interior Services in Telangana',
   description: `Crown Home Spaces is a premium construction and interior company based at ${businessStreetAddress}, delivering elite architecture, residential construction, and project delivery across Hyderabad.`,
   url: 'https://crownhomespaces.com',
   image: 'https://crownhomespaces.com/og-image.jpg',
@@ -85,7 +85,7 @@ const SEO = ({ title, description, url, image, keywords, canonical, structuredDa
         name: 'Crown Home Spaces',
         url: meta.url,
         description: meta.description,
-        areaServed: 'Kondapur, Hyderabad, India'
+        areaServed: 'Telangana, Hyderabad, India'
       },
       {
         '@type': 'BreadcrumbList',

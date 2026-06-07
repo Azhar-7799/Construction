@@ -28,22 +28,24 @@ const FeaturedProjects = () => (
       >
         {projects.map((project) => (
           <SwiperSlide key={project.title}>
-            <motion.article whileHover={{ scale: 1.01 }} className="group overflow-hidden rounded-2xl sm:rounded-[32px] border border-white/10 bg-gradient-to-br from-[#161113] via-[#1f1710] to-[#221a14] shadow-glow">
-              <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden">
-                <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <span className="inline-flex rounded-full bg-crown-gold/15 px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-crown-gold">{project.category}</span>
-                  <h3 className="mt-3 sm:mt-4 text-lg sm:text-2xl font-semibold">{project.title}</h3>
+            <Link to={`/projects/${project.slug}`}>
+              <motion.article whileHover={{ scale: 1.01 }} className="group overflow-hidden rounded-2xl sm:rounded-[32px] border border-white/10 bg-gradient-to-br from-[#161113] via-[#1f1710] to-[#221a14] shadow-glow cursor-pointer">
+                <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden">
+                  <img src={project.image} alt={project.title} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <span className="inline-flex rounded-full bg-crown-gold/15 px-3 py-1 text-[10px] sm:text-xs uppercase tracking-[0.3em] text-crown-gold">{project.category}</span>
+                    <h3 className="mt-3 sm:mt-4 text-lg sm:text-2xl font-semibold">{project.title}</h3>
+                  </div>
                 </div>
-              </div>
-              <div className="space-y-2 p-5 sm:space-y-3 sm:p-6 md:p-8">
-                <p className="text-xs sm:text-sm leading-6 sm:leading-7 text-crown-beige/90">{project.description}</p>
-                <Link to="/projects" className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-crown-gold transition hover:text-white">
-                  View case study
-                </Link>
-              </div>
-            </motion.article>
+                <div className="space-y-2 p-5 sm:space-y-3 sm:p-6 md:p-8">
+                  <p className="text-xs sm:text-sm leading-6 sm:leading-7 text-crown-beige/90">{project.description}</p>
+                  <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-crown-gold group-hover:text-white">
+                    View case study
+                  </span>
+                </div>
+              </motion.article>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

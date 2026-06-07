@@ -1,6 +1,6 @@
-export const businessStreetAddress = 'BTR Tower, 3/B, My Home Mangala Rd, Kondapur, Prem Nagar, Hafeezpet, Hyderabad, Telangana 500049';
-export const businessAddressShort = 'BTR Tower, 3/B, My Home Mangala Rd, Kondapur, Prem Nagar, Hafeezpet, Hyderabad, Telangana 500049';
-export const businessLocality = 'Kondapur';
+export const businessStreetAddress = 'BTR Tower, 3/B, My Home Mangala Rd, Telangana, Prem Nagar, Hafeezpet, Hyderabad, Telangana 500049';
+export const businessAddressShort = 'BTR Tower, 3/B, My Home Mangala Rd, Telangana, Prem Nagar, Hafeezpet, Hyderabad, Telangana 500049';
+export const businessLocality = 'Telangana';
 export const businessRegion = 'Telangana';
 export const businessCountry = 'India';
 export const googleMapsQuery = encodeURIComponent(`${businessAddressShort}, India`);

@@ -159,7 +159,7 @@ const Header = () => {
             aria-expanded={open}
             aria-controls="mobile-navigation"
             aria-label={open ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-crown-gold/50 text-crown-gold lg:hidden"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-crown-gold/50 bg-crown-gold/10 text-crown-gold hover:bg-crown-gold/20 lg:hidden"
           >
             {open ? <FiX size={22} /> : <FiMenu size={22} />}
           </button>
