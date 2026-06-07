@@ -50,7 +50,7 @@ const Footer = () => (
             <img src={founderImage} alt="Shaik Azaruddin Founder" title="Work with Shaik Azaruddin" loading="lazy" className="h-10 w-10 rounded-lg object-cover" />
             <div>
               <p className="text-sm font-semibold text-white">Work with Founder</p>
-              <Link to="/master-azhar" className="text-xs text-crown-beige/90 hover:text-white">Book a consultation</Link>
+              <a href='https://wa.me/919553041347' className="text-xs text-crown-beige/90 hover:text-white">Book a consultation</a>
             </div>
           </div>
         </div>
