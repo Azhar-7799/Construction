@@ -10,7 +10,7 @@ const ContactPreview = () => (
           <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">Let's build together</p>
           <h2 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">Start your next flagship project with confidence.</h2>
           <p className="mt-6 max-w-xl leading-8 text-crown-beige/90 sm:text-lg">
-            Connect with our Kondapur team for a consultation that blends construction interiors, turnkey delivery, and premium architectural excellence.
+            Connect with our Telangana team for a consultation that blends construction interiors, turnkey delivery, and premium architectural excellence.
           </p>
           <div className="mt-8 space-y-4 text-sm text-crown-beige/90">
             <a href="mailto:crownhomespaces@gmail.com" className="inline-flex items-center gap-3 text-white transition hover:text-crown-gold"><FaEnvelope /> Email: crownhomespaces@gmail.com</a>

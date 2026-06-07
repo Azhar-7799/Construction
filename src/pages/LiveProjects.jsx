@@ -57,7 +57,7 @@ const LiveProjects = () => {
           <div className="max-w-3xl rounded-[32px] border border-white/10 bg-black/40 p-8 shadow-glow backdrop-blur-xl">
             <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Live Projects Showcase</p>
             <h1 className="mt-4 text-4xl font-semibold text-white sm:text-5xl lg:text-6xl">Cinematic luxury architecture, interiors, and turnkey construction.</h1>
-            <p className="mt-6 text-base leading-8 text-crown-beige/90 sm:text-lg">A premium hero presentation of current projects and upcoming luxury properties from Crown Home Spaces, designed for discerning clients in Kondapur and Hyderabad.</p>
+            <p className="mt-6 text-base leading-8 text-crown-beige/90 sm:text-lg">A premium hero presentation of current projects and upcoming luxury properties from Crown Home Spaces, designed for discerning clients across Telangana and Hyderabad.</p>
           </div>
         </div>
       </section>
@@ -67,7 +67,7 @@ const LiveProjects = () => {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Live Projects</p>
-              <h1 className="mt-4 text-[clamp(2rem,5vw,3.75rem)] font-semibold text-white sm:text-[clamp(2.5rem,4vw,4.5rem)] lg:text-[clamp(3rem,3.5vw,5rem)]">Cinematic construction interior and turnkey project showcases from Kondapur.</h1>
+              <h1 className="mt-4 text-[clamp(2rem,5vw,3.75rem)] font-semibold text-white sm:text-[clamp(2.5rem,4vw,4.5rem)] lg:text-[clamp(3rem,3.5vw,5rem)]">Cinematic construction interior and turnkey project showcases across Telangana.</h1>
               <p className="mt-6 max-w-xl text-[clamp(0.95rem,1.1vw,1.125rem)] leading-8 text-crown-beige/90">A premium collection of live projects designed and delivered by Crown Home Spaces, featuring architectural elevations, residential construction, and construction interiors with gold accent details.</p>
               <div className="mt-8 flex flex-wrap gap-3">
 <Link to="/projects" className="inline-flex items-center justify-center rounded-full bg-crown-gold px-6 py-3 text-sm font-semibold text-crown-dark transition hover:bg-white">View Portfolio</Link>
@@ -188,7 +188,7 @@ const LiveProjects = () => {
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
                 <p className="text-3xl font-semibold text-white">Hyderabad Focus</p>
-                <p className="mt-2 text-sm text-crown-beige/90">Local delivery across Kondapur, Gachibowli, Jubilee Hills, Hitech City, and more.</p>
+                <p className="mt-2 text-sm text-crown-beige/90">Local delivery across Telangana, including Gachibowli, Jubilee Hills, Hitech City, and more.</p>
               </div>
             </div>
           </div>

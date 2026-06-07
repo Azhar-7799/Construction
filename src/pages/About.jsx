@@ -14,7 +14,7 @@ const About = () => (
             <p className="text-sm uppercase tracking-[0.35em] text-crown-gold">About the firm</p>
             <h1 className="mt-4 text-5xl font-semibold text-white sm:text-6xl">A heritage of premium interiors and turnkey delivery in Kondapur.</h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-crown-beige/90">
-              Crown Home Spaces is grounded in Kondapur with a team of designers, creators, and delivery specialists who craft curated architecture, refined construction interiors, and seamless turnkey execution.
+              Crown Home Spaces is grounded in Telangana with a team of designers, creators, and delivery specialists who craft curated architecture, refined construction interiors, and seamless turnkey execution.
             </p>
           </div>
           <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-black/40 p-4 shadow-glow">

@@ -65,7 +65,7 @@ For residential homes in Banjara Hills and premium offices in the Financial Dist
     pageTitle: 'Residential Construction Company in Hyderabad | Crown Home Spaces',
     metaDescription: 'Trusted residential construction services in Hyderabad for villas, penthouses, and premium homes with quality supervision and timely delivery.',
     keywords: 'Residential Construction Hyderabad, Villa Construction Hyderabad, Luxury Home Builders Hyderabad, House Construction Company Hyderabad',
-    about: `Our residential construction service empowers homeowners across Kondapur, Banjara Hills, Madhapur, and the Financial District to realize homes that are both expressive and structurally sound. We deliver complete site execution with a focus on long-term durability, climate-sensitive materials, and construction systems that support a premium lifestyle. From reinforced foundations to high-end surface finishes, every aspect is overseen by an experienced project team.
+    about: `Our residential construction service empowers homeowners across Telangana, including Banjara Hills, Madhapur, and the Financial District to realize homes that are both expressive and structurally sound. We deliver complete site execution with a focus on long-term durability, climate-sensitive materials, and construction systems that support a premium lifestyle. From reinforced foundations to high-end surface finishes, every aspect is overseen by an experienced project team.
 
 We work closely with architects, engineers, and interior professionals to ensure that the construction sequence supports design intent. This includes accurate concrete pours, waterproofing of terraces and bathrooms, and coordination of MEP services with architectural ceilings and concealed lighting. The result is a home that is not only beautifully composed but also comfortable, safe, and engineered for excellent occupancy.
 
@@ -118,7 +118,7 @@ Because we build in Hyderabad’s most discerning neighborhoods, we are highly f
     pageTitle: 'Turnkey Project Delivery in Hyderabad | Crown Home Spaces',
     metaDescription: 'Turnkey project delivery in Hyderabad for luxury homes, premium offices, and hospitality spaces with one-point accountability and superior craftsmanship.',
     keywords: 'Turnkey Projects Hyderabad, Turnkey Contractors Hyderabad, Turnkey Interior Company Hyderabad, Full-Service Turnkey Projects Hyderabad',
-    about: `Our turnkey project service is designed for clients who want a single accountable team for design, procurement, construction, and handover. From the first brief in Kondapur through final furniture placement in Jubilee Hills, we manage every element with transparency and quality control. This means a smoother experience for clients, fewer coordination gaps, and a highly refined finished environment.
+    about: `Our turnkey project service is designed for clients who want a single accountable team for design, procurement, construction, and handover. From the first brief in Telangana through final furniture placement in Jubilee Hills, we manage every element with transparency and quality control. This means a smoother experience for clients, fewer coordination gaps, and a highly refined finished environment.
 
 We specialise in complex turnkey assignments across residential penthouses, boutique offices, retail showrooms, and hospitality venues. The advantage of turnkey delivery is that design decisions, budget management, contractor oversight and finish selection happen through one cohesive process. That allows us to address latent risks early, keep the schedule aligned, and deliver exceptional spaces that feel polished on day one.
 
@@ -412,7 +412,7 @@ Construction management is especially valuable in Hyderabad’s dynamic market b
     faq: [
       { question: 'What is construction management?', answer: 'Construction management is a service that oversees the entire build process, providing coordination, quality control, cost tracking, and schedule management on behalf of the client.' },
       { question: 'How does construction management differ from general contracting?', answer: 'Construction management focuses on client advocacy and project coordination, while a general contractor is often responsible for hiring subcontractors and executing the work directly.' },
-      { question: 'Can you manage projects in Hyderabad neighborhoods?', answer: 'Yes, we manage construction projects across Kondapur, Gachibowli, Madhapur, Jubilee Hills, Hitech City, and other Hyderabad areas.' },
+      { question: 'Can you manage projects in Hyderabad neighborhoods?', answer: 'Yes, we manage construction projects across Telangana, including Gachibowli, Madhapur, Jubilee Hills, Hitech City, and other Hyderabad areas.' },
       { question: 'Do you provide weekly progress reports?', answer: 'Yes, we provide regular progress updates, site photographs, and milestone reviews to keep clients informed.' },
       { question: 'Will you help with vendor selection?', answer: 'Yes, we help select subcontractors, suppliers, and specialist vendors that are aligned with the project standards and budget.' },
       { question: 'Do you manage project risks and delays?', answer: 'Yes, our construction management team proactively identifies risks and manages timeline adjustments to minimize delays.' },

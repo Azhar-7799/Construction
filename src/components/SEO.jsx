@@ -85,7 +85,7 @@ const SEO = ({ title, description, url, image, keywords, canonical, structuredDa
         name: 'Crown Home Spaces',
         url: meta.url,
         description: meta.description,
-        areaServed: 'Kondapur, Hyderabad, India'
+        areaServed: 'Telangana, Hyderabad, India'
       },
       {
         '@type': 'BreadcrumbList',

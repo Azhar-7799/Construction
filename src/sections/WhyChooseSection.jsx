@@ -15,7 +15,7 @@ const WhyChooseSection = () => (
           { title: 'Design Excellence', detail: 'Creative planning and interior styling for elevated brand experiences.' },
           { title: 'Project Delivery', detail: 'On-time procurement, scheduling, and on-site supervision.' },
           { title: 'Technical Precision', detail: 'MEP, civil, and structural planning for robust systems.' },
-          { title: 'Local Expertise', detail: 'Kondapur-focused execution with compliance and local approvals.' }
+          { title: 'Local Expertise', detail: 'Telangana-focused execution with compliance and local approvals.' }
         ].map((item) => (
           <motion.article key={item.title} whileHover={{ y: -4 }} className="rounded-2xl sm:rounded-[32px] border border-white/10 bg-white/5 p-5 sm:p-6 md:p-8 transition hover:border-crown-gold/30 hover:bg-white/10">
             <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white">{item.title}</h3>

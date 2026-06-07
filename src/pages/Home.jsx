@@ -41,7 +41,7 @@ const Home = () => (
               <div className="absolute inset-x-4 bottom-4 rounded-[28px] border border-white/10 bg-black/70 p-5 text-white backdrop-blur-md">
                 <p className="text-xs uppercase tracking-[0.35em] text-crown-gold">Founder Portrait</p>
                 <p className="mt-2 text-xl font-semibold">Shaik Azaruddin</p>
-                <p className="mt-1 text-sm text-crown-beige/90">CIVIL ENGINEER | CROWN HOME SPACES | KONDAPUR</p>
+                <p className="mt-1 text-sm text-crown-beige/90">CIVIL ENGINEER | CROWN HOME SPACES | TELANGANA</p>
               </div>
             </motion.div>
           </div>

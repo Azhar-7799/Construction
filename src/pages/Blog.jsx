@@ -19,7 +19,7 @@ const Blog = () => (
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
           <article className="rounded-[32px] border border-white/10 bg-black/50 p-6 transition hover:border-crown-gold/30">
             <h2 className="text-2xl font-semibold text-white">How to Choose the Right Construction Partner in Hyderabad</h2>
-            <p className="mt-4 text-sm leading-7 text-crown-beige/90">Learn how to evaluate experience, local approvals, and quality standards for residential and commercial projects across Kondapur and Hitech City.</p>
+            <p className="mt-4 text-sm leading-7 text-crown-beige/90">Learn how to evaluate experience, local approvals, and quality standards for residential and commercial projects across Telangana and Hitech City.</p>
           </article>
           <article className="rounded-[32px] border border-white/10 bg-black/50 p-6 transition hover:border-crown-gold/30">
             <h2 className="text-2xl font-semibold text-white">Interior Material Trends for Premium Hyderabad Homes</h2>

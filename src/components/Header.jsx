@@ -188,7 +188,7 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.25 }}
-              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-2xl lg:hidden overflow-hidden h-screen"
+              className="fixed inset-y-0 right-0 z-[70] flex w-full max-w-sm flex-col bg-white shadow-xl rounded-xl lg:hidden overflow-hidden h-screen"
             >
               <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">Navigation</p>
