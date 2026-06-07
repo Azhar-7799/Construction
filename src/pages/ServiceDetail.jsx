@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
-import { servicePages, serviceHeroImages } from '../data/services.js';
+import { servicePages } from '../data/services.js';
+import { serviceHeroImages } from '../data/serviceHeroImages.js';
 
 const FALLBACK_HERO =
   'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600"%3E%3Cdefs%3E%3ClinearGradient id="g" x1="0" y1="0" x2="1" y2="1"%3E%3Cstop offset="0%25" stop-color="%23403630"/%3E%3Cstop offset="100%25" stop-color="%231c140f"/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width="1200" height="600" fill="url(%23g)"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" fill="%23fff" font-family="Inter,sans-serif" font-size="42" font-weight="700"%3ECrown Home Spaces%3C/text%3E%3C/svg%3E';
