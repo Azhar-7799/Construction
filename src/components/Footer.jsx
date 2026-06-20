@@ -14,7 +14,7 @@ const navLinks = [
   { label: 'Testimonials', path: '/testimonials' },
   { label: 'Careers', path: '/careers' },
   { label: 'Founder', path: '/master-azhar' },
-  { label: 'Fighters Combat Academy', path: 'https://fighter-combat.vercel.app/', external: true },=
+  { label: 'Fighters Combat Academy', path: 'https://fighter-combat.vercel.app/', external: true },
   { label: 'Contact', path: '/contact' }
 ];
 
